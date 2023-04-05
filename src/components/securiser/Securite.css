@@ -1,0 +1,50 @@
+section#securite {
+    background-color: #efefef;
+}
+
+#securite h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.securite .col-sm-6 img {
+    width: 500px;
+    height: 100%;
+}
+
+.securite .col-sm-6 button {
+    border: 1px solid #ce9900;
+    width: auto !important;
+    padding: .6rem 2rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #ce9900;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.securite .title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #020007;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1050px) {
+    .securite {
+        display: block;
+    }
+
+    .securite .text {
+        margin: 0.6rem 1rem;
+    }
+
+    .securite .image img {
+        width: 250px;
+    }
+}

@@ -1,0 +1,44 @@
+section#domaine {
+    background-color: #efefef;
+}
+
+.domaine h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.domaine .col-sm-6 img {
+    width: 100%;
+}
+
+.domaine .col-sm-6 h6 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #020007;
+    font-weight: 700;
+}
+
+.domaine .link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: #ce9900;
+}
+
+.domaine .link a {
+    color: #020007;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 990px) {
+    .domaine .grille {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+
+    .domaine .card {
+        width: auto !important;
+        margin: 0.2rem 1rem;
+    }
+}

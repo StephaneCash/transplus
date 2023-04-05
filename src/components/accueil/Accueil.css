@@ -1,0 +1,98 @@
+section#accueil {
+    background: url("../../assets/acuueil.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 90px;
+}
+
+.overImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.accueil .text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.accueil .text h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.accueil .text p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.accueil .btnDec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.accueil .btnDec .dec {
+    border: 1px solid #ce9900;
+    width: auto !important;
+    padding: 1rem 2rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #ce9900;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+        rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.accueil .btnDec .com {
+    border: 1px solid #ce9900;
+    width: auto !important;
+    padding: 1rem 2rem;
+    color: #111;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.accueil .btnDec .com svg {
+    color: #ce9900;
+    position: relative;
+    animation: mymove 3s infinite;
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 20px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .accueil .text {
+        text-align: left;
+    }
+
+    .accueil .text h1 {
+        font-size: 2rem;
+    }
+}

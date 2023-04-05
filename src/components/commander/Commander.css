@@ -1,0 +1,15 @@
+.commander {
+    margin-top: 60px;
+    padding: 1px 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.commander h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #020007;
+    font-weight: 700;
+}
