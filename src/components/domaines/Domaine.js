@@ -13,27 +13,28 @@ const Domaine = () => {
                         <img src={about} alt="Photo_about" />
                     </div>
                     <div className='col-sm-6'>
-                        <h6>La plus grande entreprise mondiale avec une qualité de services très avancée.</h6>
+                        <h6>La plus grande entreprise de transport en RDC avec une qualité de services très avancée</h6>
                         <p>
-                            Une entreprise de transport de marchandises a pour objet social le transport de marchandises par le réseau routier. On distingue le transport routier poids lourd (utilisation de véhicules de plus de 3.5 tonnes),
-                            du transport léger de marchandises (utilisation de véhicules de moins de 3.5 tonnes). <br />
+                            Transplus est une branche de Munie Group (entreprise multi secteurs) qui met à la disposition
+                            du peuple congolais en particulier Kinois, la manière la plus simple de commmander vos courses en toute sécurité
+                            à tout moment et depuis n'importe où.
                         </p>
                         <div className='mt-5'>
                             <div className='row'>
                                 <div className='col-sm-6 link'>
-                                    <FaCheckCircle /> <i className='fa fa-user'></i>  <a href="">Révisions illimitées</a>
+                                    <FaCheckCircle /> <i className='fa fa-user'></i>  <a href="">Réservations illimitées</a>
                                 </div>
                                 <div className='col-sm-6 link'>
-                                    <FaCheckCircle /> <a href="">Bonnes fonctionnalités</a>
+                                    <FaCheckCircle /> <a href="">Franche collaboration</a>
                                 </div>
                             </div>
 
                             <div className='row mt-2'>
                                 <div className='col-sm-6 link'>
-                                    <FaCheckCircle />  <a href="">Meilleurs solutions</a>
+                                    <FaCheckCircle />  <a href="">Sécurité assurée</a>
                                 </div>
                                 <div className='col-sm-6 link'>
-                                    <FaCheckCircle /> <a href="">24/7 Services</a>
+                                    <FaCheckCircle /> <a href="">24/7 Disponibilité</a>
                                 </div>
                             </div>
                         </div>

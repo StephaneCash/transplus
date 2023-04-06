@@ -1,12 +1,13 @@
 import React from 'react'
 import './Developper.css'
-import taxi from "../../assets/taxi.png"
 import moto from "../../assets/moto.jpg"
 import moto1 from "../../assets/moto1.jpg"
 import DELIVRE from "../../assets/delivre.svg"
 import FORMATION from "../../assets/formation.svg"
+import { Link } from 'react-router-dom'
 
 const Developper = () => {
+
     return (
         <section id="developper">
             <h1>Nos services</h1>
@@ -17,11 +18,14 @@ const Developper = () => {
                         <div className='overPlay'></div>
                         <div className='card-body'>
                             <h4>Commande de courses</h4>
-                            Chez Munie Group, nous nous engageons pour votre sécurité.
-                            Nous avons mis en place des mesures pour des courses sécurisées afin que vous puissiez vous déplacer
-                            sereinement.
+                            Voulez-vous vous déplacez en toute sécurité ? <br />
+                            Oui, nous sommes votre solution.
+                            Commander votre course depuis n'importe où et profiter de votre demande
+                            de manière la plus simple.
                             <div className=''>
-                                <button>Commander une course</button>
+                                <button>
+                                    <Link to="/commander-une-course">Commander une course</Link>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -30,12 +34,10 @@ const Developper = () => {
                         <div className='overPlay'></div>
                         <div className='card-body'>
                             <h4> Prêt des motos par contrat</h4>
-
-                            Il s'agit tout simplement d'un emprunt remboursable par l'entreprise selon des mensualités fixées à
-                            l'avance par l'organisme financier. Bien souvent les crédits adressés aux professionnels sont plus avantageux et moins contraignants que ceux destinés aux particuliers.
-
+                            Réaliser votre rêve en vous offrant une moto de qualité de votre choix en sollicitant un prêt chez nous.
+                            Nous répondons aux souhaits de tout le monde sans exception. <br /> Profiter de nos services.
                             <div className=''>
-                                <button>Commander une course</button>
+                                <button>Solliciter un prêt</button>
                             </div>
                         </div>
                     </div>
@@ -44,11 +46,10 @@ const Developper = () => {
                         <div className='overPlay'></div>
                         <div className='card-body'>
                             <h4>Livrer vos produits avec nous</h4>
-                            La livraison est le fait d'acheminer un produit d'un acteur à un autre. <br />
-                            Il peut s'agir d'une livraison du fournisseur jusqu'aux entrepôts du commerçant, d'une livraison entre le commerçant et le client final,
-                            ou d'une livraison directe entre le fournisseur et le consommateur.
+                            Livrez vos produits légalement au moment voulu à n'importe où et en toute sécurité.
+                            Notre priorité c'est votre bonheur.
                             <div>
-                                <button>Commander une course</button>
+                                <button>Commencer votre livraison</button>
                             </div>
                         </div>
                     </div>
@@ -56,19 +57,17 @@ const Developper = () => {
                         <img src={FORMATION} alt="Taxi" />
                         <div className='overPlay'></div>
                         <div className='card-body'>
-                            <h4>Nous offrons des formations de qualités dans le domaine de transport</h4>
-                            Action de former, manière dont quelque chose se forme ; processus entraînant l'apparition
-                            de quelque chose qui n'existait pas auparavant : La formation d'un abcès. La formation d'une équipe. 2. Développement et
-                            modification de l'organisme qui rend l'individu capable d'exercer les fonctions de reproduction.
-                            sereinement.
+                            <h4>Formez-vous dans le domaine de transport avec des formations de très bonne qualité</h4>
+                            Soyez ce que vous avez toujours rêvé en souscriant à l'une ou plusieurs de nos
+                            formations, transmises par de professeurs compétents dans le domaine.
                             <div className=''>
-                                <button>Commander une course</button>
+                                <button>Formez-vous</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

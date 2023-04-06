@@ -13,13 +13,18 @@ const Navbar = () => {
       </Link>
       <ul>
         <li>
-          <a href="#d">Accueil</a>
-          <a href="#d">Nos offres</a>
+          <a href="#domaine">A Propos</a>
+          <a href="#d">Nos services</a>
           <a href="#d">Nos solutions</a>
-          <a href="#d">Services</a>
-          <a href="#d">Société</a>
-          <a href="#d">Carrières</a>
-          <a href="#d">Contact</a>
+          <a href="#d">Nos offres d'emploi</a>
+          <a href="#d">Confiance</a>
+          <a href="#d">Partenaires</a>
+          <a href="#d" style={{
+            background: "silver",
+            padding: "10px",
+            color: "black",
+            borderRadius: "5px"
+          }}>S'inscrire</a>
         </li>
       </ul>
     </nav>

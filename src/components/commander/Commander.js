@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./Commander.css";
 import SignIn from '../Log/SignIn';
 
 const Commander = () => {
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, []);
+
     return (
         <section>
             <div className='commander container'>

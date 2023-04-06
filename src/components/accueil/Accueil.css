@@ -33,7 +33,7 @@ section#accueil {
 }
 
 .accueil .text p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 2rem;
 }
@@ -58,13 +58,13 @@ section#accueil {
 }
 
 .accueil .btnDec .com {
-    border: 1px solid #ce9900;
+    border: 1px solid #cccccc;
     width: auto !important;
     padding: 1rem 2rem;
-    color: #111;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #020007;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -77,15 +77,6 @@ section#accueil {
     animation: mymove 3s infinite;
 }
 
-@keyframes mymove {
-    from {
-        left: 0px;
-    }
-
-    to {
-        left: 20px;
-    }
-}
 
 @media screen and (max-width:600px) {
     .accueil .text {

@@ -9,11 +9,11 @@ const Accueil = () => {
             <div className='overImage'></div>
             <div className='container accueil'>
                 <div className='text'>
-                    <h1>Munie Group, entreprise multi-secteurs</h1>
+                    <h1>Transplus, déplacez-vous en toute sécurité</h1>
 
                     <p>
-                        Nous sommes une Entreprise Multi services proposant dans des domaines innovants de solutions simples de qualité. <br />
-                        Nous évoluons dans le transport, la nouvelle technologie, la construction métallique, l'Agro Alimentaire et l'Elévage.
+                        Facilitez vos déplacements sans inquiétude en commandant
+                        vos courses chez nous en toute sécurité
                     </p>
 
                     <div className='btnDec'>
@@ -21,7 +21,7 @@ const Accueil = () => {
                             Découvrir
                         </a>
                         <Link to="commander-une-course" className='com'>
-                            Commander une course <FaMotorcycle size={30}/>
+                            Commander une course <FaMotorcycle size={30} />
                         </Link>
                     </div>
                 </div>
