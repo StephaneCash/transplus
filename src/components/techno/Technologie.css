@@ -14,13 +14,13 @@ section#techno {
     height: auto;
     display: grid;
     margin-top: 4rem;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fill, 240px);
     justify-content: center;
     align-items: center;
 }
 
 .techno .card {
-    width: 200px;
+    width: 240px;
     display: flex;
     justify-content: center;
     align-items: center;

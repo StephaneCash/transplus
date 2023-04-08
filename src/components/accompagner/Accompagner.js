@@ -1,8 +1,8 @@
 import React from 'react'
 import "./Accompagner.css"
-import p1 from "../../assets/p1.jpg"
-import p2 from "../../assets/p2.jpg"
-import p3 from "../../assets/p3.jpg"
+import collaboration from "../../assets/collaboration.svg"
+import security from "../../assets/security.svg"
+import dispo from "../../assets/dispo.svg"
 
 const Accompagner = () => {
     return (
@@ -12,7 +12,7 @@ const Accompagner = () => {
                 <div className='grille'>
                     <div class="card">
                         <div class="imgBx">
-                            <img src={p1} alt="P1" />
+                            <img src={collaboration} alt="P1" />
                         </div>
                         <div class="contentBx">
                             <h2>Collaboration</h2>
@@ -34,7 +34,7 @@ const Accompagner = () => {
                     </div>
                     <div class="card">
                         <div class="imgBx">
-                            <img src={p2} alt="P1" />
+                            <img src={security} alt="P1" />
                         </div>
                         <div class="contentBx">
                             <h2>Sécurité</h2>
@@ -56,7 +56,7 @@ const Accompagner = () => {
                     </div>
                     <div class="card">
                         <div class="imgBx">
-                            <img src={p3} alt="P1" />
+                            <img src={dispo} alt="P1" />
                         </div>
                         <div class="contentBx">
                             <h2>Disponibilité</h2>
