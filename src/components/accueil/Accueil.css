@@ -5,7 +5,7 @@ section#accueil {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    margin-top: 90px;
+    margin-top: 72px;
 }
 
 .overImage {
@@ -48,7 +48,7 @@ section#accueil {
 .accueil .btnDec .dec {
     border: 1px solid #ce9900;
     width: auto !important;
-    padding: 1rem 2rem;
+    padding: .6rem 2rem;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -58,13 +58,13 @@ section#accueil {
 }
 
 .accueil .btnDec .com {
-    border: 1px solid #cccccc;
+    border: 1px solid #fff;
     width: auto !important;
-    padding: 1rem 2rem;
-    color: #fff;
+    padding: .5rem 2rem;
+    color: #111;
     text-decoration: none;
     border-radius: 5px;
-    background-color: #020007;
+    background-color: silver;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -72,7 +72,7 @@ section#accueil {
 }
 
 .accueil .btnDec .com svg {
-    color: #ce9900;
+    color: #111;
     position: relative;
     animation: mymove 3s infinite;
 }
