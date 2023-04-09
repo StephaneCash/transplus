@@ -9,9 +9,10 @@ const Commander = () => {
     }, []);
 
     return (
-        <section>
-            <div className='commander container'>
-                <div>
+        <>
+            <section id="commander">
+                <div className='overPlay'></div>
+                <div className='text'>
                     <h2>
                         Trouvez l'option de transport qui vous convient
                     </h2>
@@ -21,9 +22,12 @@ const Commander = () => {
                         Connectez-vous pour profiter de nos services
                     </p>
                 </div>
+            </section>
+
+            <div className='commander container'>
                 <SignIn />
             </div>
-        </section>
+        </>
     )
 }
 

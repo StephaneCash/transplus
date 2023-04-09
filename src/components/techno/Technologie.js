@@ -8,44 +8,32 @@ const Technologie = () => {
       <div className="container techno">
         <div className="grille">
           <div className="card">
-            <div className="card-body">
-              <img src="./pullup.jpeg" alt="HTML" />
-            </div>
+            <img src="./pullup.jpeg" alt="pullUp" />
+          </div>
+          <div className="card">
+            <img src="./code.jpeg" alt="EmpireCode" />
           </div>
           <div className="card">
             <div className="card-body">
-              <img src="./code.jpeg" alt="HTML" />
+              <img src="./fec.jpg" alt="Fec" />
             </div>
           </div>
           <div className="card">
-            <div className="card-body">
-              <img src="./fec.jpg" alt="HTML" />
-            </div>
+            <img src="./manitech.png" alt="Manitech" />
           </div>
           <div className="card">
             <div className="card-body">
-              <img src="./manitech.png" alt="HTML" />
+              <img src="./btech.jpg" alt="Btech" />
             </div>
           </div>
           <div className="card">
-            <div className="card-body">
-              <img src="./gitlab.png" alt="GitLab" />
-            </div>
+            <img src="./lagrinta.jpg" alt="lagrinta" />
           </div>
           <div className="card">
-            <div className="card-body">
-              <img src="./jenkins.png" alt="Jenkis" />
-            </div>
+            <img src="./green.jpg" alt="Docker" />
           </div>
           <div className="card">
-            <div className="card-body">
-              <img src="./docker.png" alt="Docker" />
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-body">
-              <img src="./iot.png" alt="IOT" />
-            </div>
+            <img src="./chips.jpg" alt="IOT" />
           </div>
         </div>
       </div>

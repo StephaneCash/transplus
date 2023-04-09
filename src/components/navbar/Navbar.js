@@ -20,8 +20,8 @@ const Navbar = () => {
           <a href="#d"> Nos offres d 'emploi</a>
           <a href="#d"> Confiance </a>
           <a href="#d"> Partenaires </a>
-          <a
-            href="#d"
+          <Link
+            to="/signup"
             style={{
               background: "silver",
               padding: "10px",
@@ -31,7 +31,7 @@ const Navbar = () => {
           >
             {" "}
             S 'inscrire
-          </a>{" "}
+          </Link>{" "}
         </li>{" "}
       </ul>
     </nav>

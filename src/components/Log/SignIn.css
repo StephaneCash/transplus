@@ -78,6 +78,11 @@
     border: 1px solid #ce9900;
 }
 
+.log button:active {
+    background-color: #ce9900 !important;
+    border: 1px solid #ce9900 !important;
+}
+
 .log .signup {
     display: flex;
     margin-top: 1rem;
@@ -87,4 +92,13 @@
 
 .log .signup .deux {
     color: #ce9900;
+    font-size: 14px;
+}
+
+.log .signup .one {
+    font-size: 14px;
+}
+
+.Toastify__toast-container--top-right {
+    z-index: 1000000000 !important;
 }

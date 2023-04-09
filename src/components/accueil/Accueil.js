@@ -9,7 +9,7 @@ const Accueil = () => {
             <div className='overImage'></div>
             <div className='container accueil'>
                 <div className='text'>
-                    <h1>Transplus, déplacez-vous en toute sécurité</h1>
+                    <h1>Transplus, déplacez-vous autrement et en toute sécurité</h1>
 
                     <p>
                         Facilitez vos déplacements sans inquiétude en commandant

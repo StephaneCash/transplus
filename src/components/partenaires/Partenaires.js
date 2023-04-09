@@ -6,7 +6,8 @@ const Partenaires = () => {
   return (
     <section id="partenaire">
       <div className='container partenaire'>
-        Créé par Munie Group {date}
+        &copy; Munie Group {date} tous droits réservés - Mentions légales
+        - Politique de confidentialité - cgu -  Politique de Cookies
       </div>
     </section>
   )

@@ -3,6 +3,7 @@ import "./Accompagner.css"
 import collaboration from "../../assets/collaboration.svg"
 import security from "../../assets/security.svg"
 import dispo from "../../assets/dispo.svg"
+import { Link } from 'react-router-dom'
 
 const Accompagner = () => {
     return (
@@ -29,7 +30,7 @@ const Accompagner = () => {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="#">En savoir plus</a>
+                            <Link to="/collaboration">En savoir plus</Link>
                         </div>
                     </div>
                     <div class="card">
@@ -51,7 +52,7 @@ const Accompagner = () => {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="#">En savoir plus</a>
+                            <Link to="/security">En savoir plus</Link>
                         </div>
                     </div>
                     <div class="card">
@@ -73,7 +74,7 @@ const Accompagner = () => {
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="#">En savoir plus</a>
+                            <Link to="/disponibility">En savoir plus</Link>
                         </div>
                     </div>
                 </div>

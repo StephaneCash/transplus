@@ -22,7 +22,7 @@ const Domaine = () => {
                         <div className='mt-5'>
                             <div className='row'>
                                 <div className='col-sm-6 link'>
-                                    <FaCheckCircle /> <i className='fa fa-user'></i>  <a href="">Réservations illimitées</a>
+                                    <FaCheckCircle /> <a href="">Réservations illimitées</a>
                                 </div>
                                 <div className='col-sm-6 link'>
                                     <FaCheckCircle /> <a href="">Franche collaboration</a>

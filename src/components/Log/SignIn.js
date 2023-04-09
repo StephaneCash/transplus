@@ -2,6 +2,7 @@ import React from 'react'
 import "./SignIn.css"
 import AUTH from "../../assets/auth.svg"
 import { FaFacebook, FaGoogle } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const SignIn = () => {
     return (
@@ -27,12 +28,16 @@ const SignIn = () => {
                             <label for="exampleInputPassword1">Mot de passe</label>
                             <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
                         </div>
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary">
+                            Se connecter
+                        </button>
 
                         <div className='signup'>
                             <span className='one'>Pas encore de compte ?</span>
                             <br />
-                            <span className='deux'>Créer un compte</span>
+                            <span className='deux'>
+                                <Link to="/signup">Créer un compte</Link>
+                            </span>
                         </div>
                     </form>
                 </div>
