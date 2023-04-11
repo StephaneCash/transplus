@@ -8,8 +8,14 @@ section#domaine {
     margin-bottom: 2rem;
 }
 
+.domaine .row {
+    align-items: center;
+}
+
 .domaine .col-sm-6 img {
-    width: 100%;
+    width: 80%;
+    height: 90%;
+    border-radius: 20px;
 }
 
 .domaine .col-sm-6 h6 {

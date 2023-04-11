@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Domaine.css"
-import about from '../../assets/about.png'
 import { FaCheckCircle } from "react-icons/fa"
+import logo from "../../assets/logo.JPG"
 
 const Domaine = () => {
     return (
@@ -10,7 +10,7 @@ const Domaine = () => {
                 <h1>A propos de nous</h1>
                 <div className='row'>
                     <div className='col-sm-6'>
-                        <img src={about} alt="Photo_about" />
+                        <img src={logo} alt="Photo_about" />
                     </div>
                     <div className='col-sm-6'>
                         <h6>La plus grande entreprise de transport en RDC avec une qualité de services très avancée</h6>

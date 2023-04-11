@@ -3,7 +3,7 @@ import "./Sec.css";
 import { Link } from 'react-router-dom';
 
 import security1 from "../../assets/security1.png"
-import security11 from "../../assets/security11.png"
+import clef from "../../assets/clef.png"
 import { FaHome } from "react-icons/fa";
 
 const Sec = () => {
@@ -25,7 +25,7 @@ const Sec = () => {
                 <div className='collaboration container'>
                     <div className='d-flex dFlex'>
                         <div className='col-sm-6'>
-                            <img src={security11} alt='Collaboration' />
+                            <img src={clef} alt='Collaboration' />
                         </div>
                         <div className='col-sm-6 text'>
                             <h4>Votre sécurité c'est notre priorité</h4>

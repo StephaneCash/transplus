@@ -6,6 +6,8 @@ import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css'
+import { Link } from 'react-router-dom';
+import { FaHome } from 'react-icons/fa';
 
 mapboxgl.accessToken = "pk.eyJ1IjoiY2FzaHN0ZXBoIiwiYSI6ImNsZ2FwbXlhZDFqdm4zbXA4ZGo3c2h3bmgifQ.ENYGFtxG5qPBj8SRr0Gr-A";
 
@@ -51,14 +53,8 @@ const Commander = () => {
             <section id="commander">
                 <div className='overPlay'></div>
                 <div className='text'>
-                    <h2>
-                        Trouvez l'option de transport qui vous convient
-                    </h2>
-
-                    <p>
-                        Commandez une course, montez à bord et détendez-vous. <br />
-                        Connectez-vous pour profiter de nos services
-                    </p>
+                    <Link style={{ borderBottom: "1px solid #fff", color: "#fff" }} to="/">
+                        <FaHome /></Link>/<span>Commander votre course</span>
                 </div>
             </section>
 
