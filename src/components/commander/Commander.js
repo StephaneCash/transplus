@@ -48,6 +48,15 @@ const Commander = () => {
         map.addControl(geolocate, 'top-right');
     }, []);
 
+    useEffect(() => {
+
+    }, []);
+
+    const submitData = () => {
+        let inputValue = document.querySelector('.mapboxgl-ctrl-geocoder input');
+        console.log(inputValue.value)
+    }
+
     return (
         <>
             <section id="commander">
@@ -66,7 +75,7 @@ const Commander = () => {
                     >
                     </div>
 
-                    <button className='button' id="commanderBtn">Commander</button>
+                    <button className='button' id="commanderBtn" onClick={submitData}>Commander</button>
                 </div>
             </div>
         </>
