@@ -14,7 +14,7 @@ const Domaine = () => {
                     </div>
                     <div className='col-sm-6'>
                         <h6>La plus grande entreprise de transport en RDC avec une qualité de services très avancée</h6>
-                        <p>
+                        <p className='content'>
                             Transplus est une branche de Munie Group (entreprise multi secteurs) qui met à la disposition
                             du peuple congolais en particulier Kinois, la manière la plus simple de commmander vos courses en toute sécurité
                             à tout moment et depuis n'importe où.

@@ -13,9 +13,14 @@ section#domaine {
 }
 
 .domaine .col-sm-6 img {
-    width: 80%;
-    height: 90%;
+    width: 70%;
     border-radius: 20px;
+    float: right;
+    margin-right: 5rem;
+}
+
+.domaine .col-sm-6 img:hover{
+    cursor: pointer;
 }
 
 .domaine .col-sm-6 h6 {
@@ -23,6 +28,10 @@ section#domaine {
     margin-bottom: 2rem;
     color: #020007;
     font-weight: 700;
+}
+
+.domaine .col-sm-6 .content{
+    text-align: justify;
 }
 
 .domaine .link {
