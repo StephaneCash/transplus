@@ -66,14 +66,9 @@ section#produit {
     color: #333;
 }
 
-.produit .footer1 ul li button {
-    border: 1px solid #020007;
-    width: 250px !important;
-    padding: 0.5rem 1rem;
-    color: #ddd;
-    text-decoration: none;
-    border-radius: 5px;
-    background-color: #020007
+.produit .footer1 ul li.active {
+    color: #020007;
+    text-decoration: underline;
 }
 
 .produit .chevron svg {

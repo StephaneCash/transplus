@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Produit.css"
-import { FaChevronCircleUp, FaChevronRight, FaEnvelope, FaEnvelopeOpenText, FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhoneVolume, FaTwitter } from 'react-icons/fa'
+import { FaArrowRight, FaChevronCircleUp, FaChevronRight, FaEnvelope, FaEnvelopeOpenText, FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhoneVolume, FaTwitter } from 'react-icons/fa'
 
 const Produit = () => {
 
@@ -32,11 +32,11 @@ const Produit = () => {
 
                     <ul>
                         <li>Voulez-vous une course ?</li>
-                        <li>
-                            <button>Commander votre course</button>
+                        <li className='active'>
+                            <FaArrowRight />   Commander votre course
                         </li>
-                        <li>
-                            <button>Découvrir nos offres</button>
+                        <li className='active'>
+                            <FaArrowRight />  Découvrir nos offres
                         </li>
                     </ul>
 
