@@ -1,37 +1,98 @@
 section#produit {
-    background-color: #89722b;
-    color: #fff;
+    background-color: silver;
 }
 
 #produit h1 {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     font-weight: 400;
     text-align: center;
     text-align: center;
+    color: black;
 }
 
-.produit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0rem;
-}
+.produit {}
 
 #produit .head {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+}
+
+.produit .form-group {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 3rem 0 !important;
 }
 
 .produit input {
     width: 500px !important;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    box-shadow: none !important;
 }
 
 .produit button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+.produit .footer1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.produit .footer1 ul {
+    padding: 0;
+    margin: 0;
+    width: 250px;
+}
+
+.produit .footer1 ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.produit .footer1 ul li:first-child {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.produit .footer1 ul li svg {
+    color: #333;
+}
+
+.produit .footer1 ul li button {
+    border: 1px solid #020007;
+    width: 250px !important;
+    padding: 0.5rem 1rem;
+    color: #ddd;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #020007
+}
+
+.produit .chevron svg {
+    position: absolute;
+    bottom: 5px;
+    color: #89722b !important;
+    right: 2rem;
+    position: fixed;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+}
+
+.produit .reseauxSociaux {
+    display: flex;
+}
+
+.produit .reseauxSociaux svg {
+    font-size: 20px;
 }

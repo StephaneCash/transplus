@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Accueil.css"
-import { FaMotorcycle } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Accueil = () => {
@@ -21,7 +20,7 @@ const Accueil = () => {
                             Découvrir
                         </a>
                         <Link to="commander-une-course" className='com'>
-                            Commander une course <FaMotorcycle size={30} />
+                            Commander une course
                         </Link>
                     </div>
                 </div>

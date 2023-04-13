@@ -14,17 +14,13 @@ const Technologie = () => {
             <img src="./code.jpeg" alt="EmpireCode" />
           </div>
           <div className="card">
-            <div className="card-body">
-              <img src="./fec.jpg" alt="Fec" />
-            </div>
+            <img src="./fec.jpg" alt="Fec" />
           </div>
           <div className="card">
             <img src="./manitech.png" alt="Manitech" />
           </div>
           <div className="card">
-            <div className="card-body">
-              <img src="./btech.jpg" alt="Btech" />
-            </div>
+            <img src="./btech.jpg" alt="Btech" />
           </div>
           <div className="card">
             <img src="./lagrinta.jpg" alt="lagrinta" />
