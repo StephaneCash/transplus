@@ -59,7 +59,6 @@ const SignUp = () => {
                 password: pwd
             })
                 .then(res => {
-                    console.log(res.data)
                     toast.success(res && res.data && res.data.message);
                     setTimeout(() => {
                         naviagate('/commander-une-course')
@@ -86,7 +85,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className='log' style={{ height: "auto", marginTop: "100px", marginBottom: "1rem", height:"700px" }}>
+        <div className='log' style={{ height: "auto", marginTop: "100px", marginBottom: "1rem", height: "700px" }}>
             <div className='form'>
                 <div className='col-sm-6'>
                     <img src={AUTH} alt="Auth" />

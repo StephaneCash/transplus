@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Produit.css"
 import { FaArrowRight, FaChevronCircleUp, FaChevronRight, FaEnvelope, FaEnvelopeOpenText, FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhoneVolume, FaTwitter } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const Produit = () => {
 
@@ -33,7 +34,9 @@ const Produit = () => {
                     <ul>
                         <li>Voulez-vous une course ?</li>
                         <li className='active'>
-                            <FaArrowRight />   Commander votre course
+                            <Link to='/commander-une-course'>
+                                <FaArrowRight />   Commander votre course
+                            </Link>
                         </li>
                         <li className='active'>
                             <FaArrowRight />  Découvrir nos offres

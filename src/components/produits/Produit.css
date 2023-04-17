@@ -74,7 +74,7 @@ section#produit {
 .produit .chevron svg {
     position: absolute;
     bottom: 5px;
-    color: #89722b !important;
+    color: #ce9900 !important;
     right: 2rem;
     position: fixed;
     cursor: pointer;
