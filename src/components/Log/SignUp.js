@@ -21,7 +21,7 @@ const SignUp = () => {
     const [email, setEmail] = useState('');
     const [pwd, setPwd] = useState('');
     const [laoding, setLoading] = useState(false);
-    const [eye, setEye] = useState(false);
+    const [eye, setEye] = useState(true);
 
     const handleEmail = (e) => {
         let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -135,12 +135,14 @@ const SignUp = () => {
                                     eye ? <FaEye style={{
                                         position: "absolute",
                                         right: "10px",
-                                        top: "15px"
+                                        top: "15px",
+                                        cursor: "pointer"
                                     }} onClick={showPassword} /> :
                                         <FaEyeSlash style={{
                                             position: "absolute",
                                             right: "10px",
-                                            top: "15px"
+                                            top: "15px",
+                                            cursor: "pointer"
                                         }} onClick={showPassword} />
                                 }
                             </div>

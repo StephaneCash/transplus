@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.JPG";
@@ -7,6 +7,8 @@ import { ContextApp } from "../../AppContext";
 const Navbar = () => {
 
   const { dataUser, setDataUser } = useContext(ContextApp);
+
+  const [showBtnInscrire, setShowBtnInscrire] = useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem('user');
@@ -35,7 +37,7 @@ const Navbar = () => {
                   }
                 </a>
                 <Link
-                  to="/signup"
+                  to="/commander-une-course"
                   style={{
                     background: "silver",
                     padding: "10px",
@@ -57,6 +59,20 @@ const Navbar = () => {
                 <a href="#d"> Nos offres d 'emploi</a>
                 <a href="#d"> Confiance </a>
                 <a href="#d"> Partenaires </a>
+                <Link
+                  to="/signup"
+                  style={{
+                    background: "silver",
+                    padding: "10px",
+                    color: "black",
+                    borderRadius: "5px",
+                  }}
+                >
+                  {" "}
+
+                  <span> {dataUser === null && "S 'inscrire"}</span>
+
+                </Link>{" "}
               </>
 
           }

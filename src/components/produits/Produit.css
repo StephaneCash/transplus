@@ -10,8 +10,6 @@ section#produit {
     color: black;
 }
 
-.produit {}
-
 #produit .head {
     display: flex;
     flex-direction: column;
@@ -66,9 +64,12 @@ section#produit {
     color: #333;
 }
 
-.produit .footer1 ul li.active {
+.produit .footer1 ul li.active a {
     color: #020007;
     text-decoration: underline;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 
 .produit .chevron svg {

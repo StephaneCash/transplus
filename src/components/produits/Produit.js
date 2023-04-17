@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Produit.css"
 import { FaArrowRight, FaChevronCircleUp, FaChevronRight, FaEnvelope, FaEnvelopeOpenText, FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhoneVolume, FaTwitter } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Produit = () => {
+
+    const [email, setEmail] = useState("");
+    const [btnClic, setBtnClic] = useState(false);
 
     const hanldeScrollTop = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
+
+    const submitEmail = () => {
+        let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        setBtnClic(true);
+        if (email) {
+            setBtnClic(false);
+            if (email.match(pattern)) {
+                setBtnClic(false);
+                toast.success("Merci pour votre suscription. " +email);
+                setEmail("");
+            } else {
+                toast.error("Veuillez entrer une adresse email valide svp.")
+            }
+        } else {
+            toast.error("Veuillez entrer une adresse email svp.");
+            setBtnClic(false);
+        }
+    }
 
     return (
         <section id="produit">
@@ -18,8 +40,15 @@ const Produit = () => {
             <div className='container produit'>
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" placeholder="Enter email" />
-                    <button className='btn btn-success'>Soumettre</button>
+                        aria-describedby="emailHelp" placeholder="Enter email"
+                        onChange={(e) => setEmail(e.target.value)}
+                        value={email}
+                    />
+                    <button className='btn btn-success' onClick={submitEmail}>
+                        {
+                            btnClic ? "Sumission..." : "Soumettre"
+                        }
+                    </button>
                 </div>
                 <div className='footer1'>
                     <ul>
@@ -58,7 +87,7 @@ const Produit = () => {
                             <FaEnvelope /> <span>transplus@gmail.com</span>
                         </li>
                         <li>
-                            <FaPhoneVolume /> <span>+243 8255226625</span>
+                            <FaPhoneVolume /> <span>+243 82 21 04 658</span>
                         </li>
                         <li>
                             <FaMapMarkerAlt /> Kinshasa, Av. Matshumu 16, Debonhomme
