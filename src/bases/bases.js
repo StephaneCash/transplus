@@ -1,1 +1,1 @@
-export const baseUrl = "http://127.0.0.1:5002/api"
+export const baseUrl = "https://ligablo-digital.com/api"

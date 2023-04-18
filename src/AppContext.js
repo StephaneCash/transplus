@@ -10,11 +10,11 @@ const AppContext = () => {
     const [userConnected, setUserConnected] = useState(null);
     const [dataUser, setDataUser] = useState(null);
 
+    const [val, setVal] = useState(null);
+
     const user = localStorage.getItem('user');
     const dataParse = JSON.parse(user)
-    const id = dataParse && dataParse.id
-
-    console.log(dataParse, " ID")
+    const id = dataParse && dataParse.id;
 
     useEffect(() => {
         if (id) {
@@ -31,7 +31,7 @@ const AppContext = () => {
     return (
         <ContextApp.Provider
             value={{
-                userConnected, setUserConnected, dataUser, setDataUser
+                userConnected, setUserConnected, dataUser, setDataUser, setVal, val
             }}
         >
             <App />

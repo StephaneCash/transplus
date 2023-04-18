@@ -8,8 +8,6 @@ const Navbar = () => {
 
   const { dataUser, setDataUser } = useContext(ContextApp);
 
-  const [showBtnInscrire, setShowBtnInscrire] = useState(false);
-
   const handleLogout = () => {
     localStorage.removeItem('user');
     setDataUser(null);
@@ -33,7 +31,7 @@ const Navbar = () => {
                 }}>
 
                   {
-                    dataUser && dataUser.data && dataUser.data.data && " Salut " + dataUser.data.data.pseudo
+                    dataUser && dataUser.data && dataUser.data.data && " Salut " + dataUser.data.data.nom
                   }
                 </a>
                 <Link

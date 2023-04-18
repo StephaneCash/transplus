@@ -8,6 +8,7 @@ import axios from 'axios'
 import { baseUrl } from '../../bases/bases'
 import { useContext } from 'react'
 import { ContextApp } from '../../AppContext'
+import Loader from '../loader/Loader'
 
 const SignIn = ({ setIsActive }) => {
 
@@ -24,7 +25,7 @@ const SignIn = ({ setIsActive }) => {
         event.preventDefault();
         if (email && pwd) {
             if (email.match(pattern)) {
-                axios.post(`${baseUrl}/users/authentification`, {
+                axios.post(`${baseUrl}/user/authentification`, {
                     email: email,
                     password: pwd
                 })
@@ -96,7 +97,7 @@ const SignIn = ({ setIsActive }) => {
                             onClick={handleAuth}
                         >
                             {
-                                btnClic ? "Authentification..." : "Se connecter"
+                                btnClic ? <Loader /> : "Se connecter"
                             }
                         </button>
 
