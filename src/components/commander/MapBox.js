@@ -41,6 +41,7 @@ const MapBox = () => {
         map.addControl(directions, 'top-left');
         map.addControl(new mapboxgl.NavigationControl());
         map.addControl(geolocate, 'top-right');
+        
     }, []);
 
     const submitData = () => {
