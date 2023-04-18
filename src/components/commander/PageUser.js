@@ -12,12 +12,16 @@ const PageUser = () => {
             <h2>Votre demande a été bien prise en compte.
                 <br /> Nos équipes vous rappeleront.
 
-                {
-                    val && val.deb && val.deb && " Votre lieu de départ : " + val.deb
-                } <br />
-                {
-                    val && val.arr && val.arr && " Votre lieu de déstination : " + val.arr
-                }
+                <p>
+                    {
+                        val && val.deb && val.deb && " Votre lieu de départ : " + val.deb
+                    }
+                </p>
+                <p>
+                    {
+                        val && val.arr && val.arr && " Votre lieu de déstination : " + val.arr
+                    }
+                </p>
                 <p>
                     <FcApproval size={30} />
                 </p>
