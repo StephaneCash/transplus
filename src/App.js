@@ -13,6 +13,7 @@ import Partenaires from "./components/partenaires/Partenaires"
 import Sec from './components/sec/Sec';
 import Dispo from './components/dispo/Dispo';
 import SignUp from './components/Log/SignUp';
+import PageUser from './components/commander/PageUser';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/security' element={<Sec />} />
         <Route path='/disponibility' element={<Dispo />} />
         <Route path='/signup' element={<SignUp />} />
+        <Route path='/answer' element={<PageUser />} />
       </Routes>
       <ToastContainer />
       <Partenaires />
