@@ -53,7 +53,7 @@ const MapBox = () => {
         let data = {}
         data.deb = inputValue[0].value;
         data.arr = inputValue[1].value;
-        setVal()
+        setVal(data)
         setClic(true);
         toast.success('Votre demande a été bien prise en compte vous serez notifié dans un bref délais ',);
         setTimeout(() => {
