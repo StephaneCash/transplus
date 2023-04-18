@@ -10,14 +10,15 @@ const PageUser = () => {
     return (
         <div className='pageA'>
             <h2>Votre demande a été bien prise en compte.
-                <br /> Nos équipes vous rappeleront.
+                <br /> Nos équipes vous rappeleront. <br/> <br/>
+                
 
-                <p>
+                <p style={{fontSize:"15px"}}>
                     {
                         val && val.deb && val.deb && " Votre lieu de départ : " + val.deb
                     }
                 </p>
-                <p>
+                <p style={{fontSize:"15px"}}>
                     {
                         val && val.arr && val.arr && " Votre lieu de déstination : " + val.arr
                     }
