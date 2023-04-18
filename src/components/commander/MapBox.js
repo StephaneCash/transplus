@@ -6,6 +6,7 @@ import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { ContextApp } from '../../AppContext';
+import Loader from '../loader/Loader';
 
 mapboxgl.accessToken = "pk.eyJ1IjoiY2FzaHN0ZXBoIiwiYSI6ImNsZ2FwbXlhZDFqdm4zbXA4ZGo3c2h3bmgifQ.ENYGFtxG5qPBj8SRr0Gr-A";
 
@@ -59,7 +60,7 @@ const MapBox = () => {
         setTimeout(() => {
             setClic(false);
             navigate("/answer");
-        }, 3000);
+        }, 2000);
     };
 
     return (
@@ -73,7 +74,7 @@ const MapBox = () => {
             <div className='contentBtn'>
                 <button className='button' id="commanderBtn" onClick={submitData}>
                     {
-                        clic ? "Commande en cours..." : "Commander"
+                        clic ?  <Loader /> : "Commander"
                     }
                 </button>
             </div>
