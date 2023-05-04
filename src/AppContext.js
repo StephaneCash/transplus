@@ -28,6 +28,8 @@ const AppContext = () => {
         }
     }, [id]);
 
+    console.log(id)
+
     return (
         <ContextApp.Provider
             value={{

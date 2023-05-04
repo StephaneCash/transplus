@@ -1,6 +1,5 @@
 #developper h1 {
-    font-size: 2.2rem;
-    font-weight: 400;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 2.5rem;
     text-align: center;
@@ -17,6 +16,7 @@
     width: 500px;
     border: 1px solid silver;
     position: relative;
+    min-height: 300px;
 }
 
 .developper .overPlay {
@@ -74,4 +74,19 @@
     font-size: 15px;
     margin-top: 1rem;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+@media screen and (max-width:600px) {
+    .developper .grille {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 100%);
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .developper .grille .card {
+        width: 100%;
+        border: 1px solid silver;
+        position: relative;
+    }
 }

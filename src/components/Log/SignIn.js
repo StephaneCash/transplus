@@ -25,7 +25,7 @@ const SignIn = ({ setIsActive }) => {
         event.preventDefault();
         if (email && pwd) {
             if (email.match(pattern)) {
-                axios.post(`${baseUrl}/user/authentification`, {
+                axios.post(`${baseUrl}/users/authentification`, {
                     email: email,
                     password: pwd
                 })
@@ -58,7 +58,7 @@ const SignIn = ({ setIsActive }) => {
 
     return (
         <div className='log'>
-            <div className='form'>
+            <div className='form signin'>
                 <div className='col-sm-6'>
                     <img src={AUTH} alt="Auth" />
                 </div>

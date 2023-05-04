@@ -1,1 +1,1 @@
-export const baseUrl = "https://ligablo-digital.com/api"
+export const baseUrl = "http://api.muniegroup.com/api"

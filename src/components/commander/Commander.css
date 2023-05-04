@@ -88,3 +88,58 @@ section#commander {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+@media screen and (max-width:1050px) {
+    #commander .text {
+        left: 50%;
+        top: 50%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .commander .col-sm-6:first-child {
+        display: none;
+    }
+
+    .commander .col-sm-6 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .commander .col-sm-6 .iconsText {
+        display: none;
+    }
+
+    .log .form {
+        width: 90% !important;
+        margin-bottom: 1rem;
+    }
+
+    .log .signup{
+        display: flex;
+        flex-direction: column;
+        gap: 0 !important;
+        justify-content: baseline;
+    }
+
+    .log .signup br{
+        display: none;
+    }
+
+    .commander .text span{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .log .form {
+        width: 95% !important;
+        margin-bottom: 1rem;
+        padding: 10px !important;
+    }
+
+    .log .form input {
+        width: 100% !important;
+    }
+}

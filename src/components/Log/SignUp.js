@@ -54,7 +54,7 @@ const SignUp = () => {
             setLoading(false);
         } else {
             axios.post(`${baseUrl}/users`, {
-                nom: username,
+                pseudo: username,
                 email: email,
                 password: pwd
             })
@@ -85,7 +85,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className='log' style={{ height: "auto", marginTop: "100px", marginBottom: "1rem", height: "700px" }}>
+        <div className='log signup' style={{ height: "auto", marginTop: "100px", marginBottom: "1rem", height: "700px" }}>
             <div className='form'>
                 <div className='col-sm-6'>
                     <img src={AUTH} alt="Auth" />

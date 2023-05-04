@@ -10,13 +10,13 @@ nav a {
     text-decoration: none;
 }
 
-nav#navbar {
+nav#navbar .navBar {
     background-color: #020007;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .3rem 4rem;
-
+    padding: .5rem 4rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 nav ul {
@@ -49,8 +49,49 @@ nav .logo img {
     width: 62px;
 }
 
-@media screen and (max-width:610px) {
-    nav ul li {
+nav .navBarVirtuel  {
+    position: relative;
+}
+
+nav .navBarVirtuel ul{
+    display: none;
+}
+nav .show ul{
+   width: 100%;
+   height: auto;
+   padding-bottom: 1rem;
+   background-color: #020007;
+   color: #fff;
+   display: block;
+   z-index: 1;
+   
+}
+
+nav .show ul li{
+    display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+nav .show ul li .btnSignUp{
+    text-align: center;
+}
+
+nav .show ul li a{
+    z-index: 1;
+    color: #fff;
+}
+
+.navBar svg {
+    display: none;
+}
+
+@media screen and (max-width:805px) {
+    nav ul {
         display: none;
+    }
+
+    .navBar svg {
+        display: block;
     }
 }

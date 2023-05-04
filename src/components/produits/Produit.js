@@ -34,17 +34,16 @@ const Produit = () => {
     return (
         <section id="produit">
             <div className='head'>
-                <h1>Joindre notre Newletter</h1>
                 <FaEnvelopeOpenText size={25} />
             </div>
             <div className='container produit'>
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" placeholder="Enter email"
+                        aria-describedby="emailHelp" placeholder="Entrer une adresse email svp"
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
                     />
-                    <button className='btn btn-success' onClick={submitEmail}>
+                    <button className='btn' onClick={submitEmail} style={{border:"1px solid silver"}}>
                         {
                             btnClic ? "Sumission..." : "Soumettre"
                         }

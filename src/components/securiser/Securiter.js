@@ -8,7 +8,7 @@ const Securiter = () => {
         <section id="securite">
             <div className='container securite'>
                 <h1>Nos offres</h1>
-                <div className='row'>
+                <div className='data'>
                     <div className='col-sm-6'>
                         <h4 className='title'>Nous proposons des offres d'emploi...</h4>
                         <p>

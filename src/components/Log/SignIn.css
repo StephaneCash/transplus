@@ -102,3 +102,13 @@
 .Toastify__toast-container--top-right {
     z-index: 1000000000 !important;
 }
+
+@media screen and (max-width:760px) {
+    .signup .col-sm-6:first-child {
+        display: none;
+    }
+
+    .signup .col-sm-6{
+        width: 100%;
+    }
+}

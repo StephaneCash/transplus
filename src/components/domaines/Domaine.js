@@ -8,7 +8,7 @@ const Domaine = () => {
         <section id="domaine">
             <div className='container domaine'>
                 <h1>A propos de nous</h1>
-                <div className='row'>
+                <div className='data'>
                     <div className='col-sm-6'>
                         <img src={logo} alt="Photo_about" />
                     </div>

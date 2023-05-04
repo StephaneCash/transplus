@@ -8,18 +8,18 @@ section#domaine {
     margin-bottom: 2rem;
 }
 
-.domaine .row {
+.domaine .data {
+    display: flex;
     align-items: center;
+    gap: 2rem;
 }
 
 .domaine .col-sm-6 img {
-    width: 70%;
-    border-radius: 20px;
-    float: right;
-    margin-right: 5rem;
+    width: 100%;
+    border-radius: 10px;
 }
 
-.domaine .col-sm-6 img:hover{
+.domaine .col-sm-6 img:hover {
     cursor: pointer;
 }
 
@@ -30,7 +30,7 @@ section#domaine {
     font-weight: 700;
 }
 
-.domaine .col-sm-6 .content{
+.domaine .col-sm-6 .content {
     text-align: justify;
 }
 
@@ -47,6 +47,28 @@ section#domaine {
     text-decoration: none;
 }
 
+@media screen and (max-width: 1200px) {
+    .domaine .col-sm-6 h6 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .domaine .col-sm-6:last-child {
+        padding: 1rem;
+    }
+
+    .domaine .data {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .domaine .col-sm-6 h6 {
+        font-size: 1.3rem;
+    }
+}
+
 @media screen and (max-width: 990px) {
     .domaine .grille {
         grid-template-columns: repeat(auto-fill, 100%);
@@ -55,5 +77,18 @@ section#domaine {
     .domaine .card {
         width: auto !important;
         margin: 0.2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .domaine .data {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .domaine .data .col-sm-6 {
+        width: 100%;
     }
 }

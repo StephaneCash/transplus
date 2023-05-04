@@ -1,5 +1,6 @@
 section#produit {
-    background-color: silver;
+    background-color: #efefef;
+    color: #333;
 }
 
 #produit h1 {
@@ -7,7 +8,6 @@ section#produit {
     font-weight: 400;
     text-align: center;
     text-align: center;
-    color: black;
 }
 
 #produit .head {
@@ -36,14 +36,20 @@ section#produit {
 }
 
 .produit .footer1 {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    margin: 1px auto;
 }
 
 .produit .footer1 ul {
     padding: 0;
     margin: 0;
     width: 250px;
+    height: 250px;
 }
 
 .produit .footer1 ul li {
@@ -52,6 +58,7 @@ section#produit {
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-size: 14px;
 }
 
 .produit .footer1 ul li:first-child {
@@ -65,11 +72,12 @@ section#produit {
 }
 
 .produit .footer1 ul li.active a {
-    color: #020007;
+    color: #333;
     text-decoration: underline;
     display: flex;
     align-items: center;
     gap: .5rem;
+    text-decoration: none;
 }
 
 .produit .chevron svg {
@@ -79,7 +87,6 @@ section#produit {
     right: 2rem;
     position: fixed;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 50px;
     height: 50px;
     border-radius: 150px;
@@ -89,6 +96,26 @@ section#produit {
     display: flex;
 }
 
+.produit svg {
+    color: #555 !important;
+}
+
 .produit .reseauxSociaux svg {
     font-size: 20px;
+}
+
+@media screen and (max-width: 670px) {
+    .produit .footer1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 250px);
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .produit .footer1 ul {
+        padding: 0;
+        margin: 0;
+        width: 250px;
+        height: auto;
+    }
 }
