@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Produit.css"
-import { FaArrowRight, FaChevronCircleUp, FaChevronRight, FaEnvelope, FaEnvelopeOpenText, FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhoneVolume, FaTwitter } from 'react-icons/fa'
+import { FaArrowRight, FaChevronRight, FaEnvelope, FaEnvelopeOpenText, FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhoneVolume, FaTwitter } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -9,10 +9,6 @@ const Produit = () => {
     const [email, setEmail] = useState("");
     const [btnClic, setBtnClic] = useState(false);
 
-    const hanldeScrollTop = () => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-    };
-
     const submitEmail = () => {
         let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
         setBtnClic(true);
@@ -20,7 +16,7 @@ const Produit = () => {
             setBtnClic(false);
             if (email.match(pattern)) {
                 setBtnClic(false);
-                toast.success("Merci pour votre suscription. " +email);
+                toast.success("Merci pour votre suscription. " + email);
                 setEmail("");
             } else {
                 toast.error("Veuillez entrer une adresse email valide svp.")
@@ -43,7 +39,7 @@ const Produit = () => {
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
                     />
-                    <button className='btn' onClick={submitEmail} style={{border:"1px solid silver"}}>
+                    <button className='btn' onClick={submitEmail} style={{ border: "1px solid silver" }}>
                         {
                             btnClic ? "Sumission..." : "Soumettre"
                         }
@@ -97,10 +93,6 @@ const Produit = () => {
                             <FaTwitter />
                         </li>
                     </ul>
-                </div>
-
-                <div className='chevron'>
-                    <FaChevronCircleUp size={50} onClick={hanldeScrollTop} />
                 </div>
             </div>
         </section>
