@@ -59,7 +59,7 @@ const SignUp = () => {
                 password: pwd
             })
                 .then(res => {
-                    toast.success(res && res.data && res.data.message);
+                    toast.success("Compte créé avec succès");
                     setTimeout(() => {
                         naviagate('/commander-une-course')
                     }, 3000);
