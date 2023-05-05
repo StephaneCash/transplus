@@ -1,6 +1,6 @@
 section#produit {
-    background-color: #efefef;
-    color: #333;
+    background-color: #111;
+    color: #ddd;
 }
 
 #produit h1 {
@@ -33,6 +33,7 @@ section#produit {
 .produit button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    color: #ddd;
 }
 
 .produit .footer1 {
@@ -62,17 +63,17 @@ section#produit {
 }
 
 .produit .footer1 ul li:first-child {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
 }
 
 .produit .footer1 ul li svg {
-    color: #333;
+    color: #ddd;
+    font-size: 1rem;
 }
 
 .produit .footer1 ul li.active a {
-    color: #333;
+    color: #ddd;
     text-decoration: underline;
     display: flex;
     align-items: center;
@@ -85,7 +86,7 @@ section#produit {
 }
 
 .produit svg {
-    color: #555 !important;
+    color: #ddd !important;
 }
 
 .produit .reseauxSociaux svg {
@@ -112,12 +113,12 @@ section#produit {
     opacity: 0;   
     width: 40px;
     height: 40px;
-    color: #fff;
+    color: #ddd;
     background-color: #333;
     position: fixed;
     bottom: 10%;
     right: 10%;    
-    border: 2px solid #fff;
+    border: 2px solid #ddd;
     border-radius: 50%; 
     font: bold 20px monospace;       
     transition: opacity 0.5s, transform 0.5s;
