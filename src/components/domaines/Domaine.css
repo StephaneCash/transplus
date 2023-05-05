@@ -14,6 +14,29 @@ section#domaine {
     gap: 2rem;
 }
 
+.dataFlex {
+    display: flex;
+    width: 100%;
+}
+
+.dataFlex .linkA {
+    width: 49.5%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.dataFlex .linkA a {
+    color: #444;
+    text-decoration: none;
+}
+
+
+.dataFlex .linkA svg {
+    color: green;
+}
+
 .domaine .col-sm-6 img {
     width: 100%;
     border-radius: 10px;
@@ -34,18 +57,7 @@ section#domaine {
     text-align: justify;
 }
 
-.domaine .link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    color: #ce9900;
-}
 
-.domaine .link a {
-    color: #020007;
-    text-decoration: none;
-}
 
 @media screen and (max-width: 1200px) {
     .domaine .col-sm-6 h6 {
@@ -91,4 +103,20 @@ section#domaine {
     .domaine .data .col-sm-6 {
         width: 100%;
     }
+
+    .dataFlex .linkA{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .dataFlex {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .towRow {
+        margin: 0 !important;
+    }
+
 }
