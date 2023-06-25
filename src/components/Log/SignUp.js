@@ -54,7 +54,7 @@ const SignUp = () => {
             setLoading(false);
         } else {
             axios.post(`${baseUrl}/users`, {
-                nom: username,
+                pseudo: username,
                 email: email,
                 password: pwd
             })

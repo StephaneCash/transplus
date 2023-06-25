@@ -1,6 +1,6 @@
 section#techno {
-    background-color: #020007;
-    color: silver;
+    background-color: #efefef;
+    color: #222;
 }
 
 #techno h1 {
@@ -29,8 +29,6 @@ section#techno {
     height: 200px;
     border-radius: 0;
     position: relative;
-    border: 1px solid #222 !important;
-    background: #020007 !important;
 }
 
 .techno .card img {

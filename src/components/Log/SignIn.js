@@ -25,7 +25,7 @@ const SignIn = ({ setIsActive }) => {
         event.preventDefault();
         if (email && pwd) {
             if (email.match(pattern)) {
-                axios.post(`${baseUrl}/user/authentification`, {
+                axios.post(`${baseUrl}/users/authentification`, {
                     email: email,
                     password: pwd
                 })

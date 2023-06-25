@@ -55,11 +55,12 @@ const MapBox = () => {
         data.deb = inputValue[0].value;
         data.arr = inputValue[1].value;
         setVal(data)
+        console.log(data)
         setClic(true);
         toast.success('Votre demande a été bien prise en compte vous serez notifié dans un bref délais ',);
         setTimeout(() => {
             setClic(false);
-            navigate("/answer");
+            //navigate("/answer");
         }, 2000);
     };
 
@@ -74,7 +75,7 @@ const MapBox = () => {
             <div className='contentBtn'>
                 <button className='button' id="commanderBtn" onClick={submitData}>
                     {
-                        clic ?  <Loader /> : "Commander"
+                        clic ? <Loader /> : "Commander"
                     }
                 </button>
             </div>
