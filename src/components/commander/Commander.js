@@ -20,7 +20,7 @@ const Commander = () => {
 
     return (
         <>
-            <section id="commander">
+            <section id="commander" className='commander'>
                 <div className='overPlay'></div>
                 <div className='text'>
                     <Link style={{ borderBottom: "1px solid #fff", color: "#fff" }} to="/">

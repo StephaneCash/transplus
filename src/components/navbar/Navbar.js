@@ -1,12 +1,15 @@
 import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.JPG";
 import { ContextApp } from "../../AppContext";
+import { FaArrowCircleRight, FaFacebook, FaInstagram, FaLinkedin, FaPlus, FaTwitter } from "react-icons/fa";
+import logo from "../../assets/logo.png"
 
 const Navbar = () => {
 
   const { dataUser, setDataUser } = useContext(ContextApp);
+
+  const [showLinks, setShowLinks] = useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem('user');
@@ -14,69 +17,78 @@ const Navbar = () => {
   };
 
   return (
-    <nav id="navbar">
-      <Link to="/">
-        <div className="logo">
-          <img src={logo} alt="Logo" />
-          <span> TRANSPLUS </span>
+    <div>
+
+      <div className="header">
+        <div className="iconsAndText">
+          <span>Suivez-nous sur</span>
+          <FaFacebook />
+          <FaTwitter />
+          <FaInstagram />
+          <FaLinkedin />
         </div>
-      </Link>
-      <ul>
-        <li>
-          {
-            dataUser && dataUser.status === 200 ?
-              <>
-                <a style={{
-                  color: 'silver'
-                }}>
+      </div>
+      <nav id="navbar">
+        <div className="navBar">
+          <Link to="/">
+            <div className="logo">
+              <img src={logo} alt="Logo" />
+              <span> TRANSPLUS </span>
+            </div>
+          </Link>
 
-                  {
-                    dataUser && dataUser.data && dataUser.data.data && " Salut " + dataUser.data.data.nom
-                  }
-                </a>
-                <Link
-                  to="/commander-une-course"
-                  style={{
-                    background: "silver",
-                    padding: "10px",
-                    color: "black",
-                    borderRadius: "5px",
-                  }}
-                >
-                  {" "}
-                  {
-                    dataUser && dataUser.status === 200 ? <span onClick={handleLogout}>Déconnexion</span> : " S 'inscrire"
-                  }
+          <ul>
+            <li>
+              {
+                dataUser && dataUser.status === 200 ?
+                  <>
+                    <Link to="" style={{
+                      color: 'silver'
+                    }}>
 
-                </Link>{" "}
-              </> :
-              <>
-                <a href="#domaine"> A Propos </a>
-                <a href="#d"> Nos services </a>
-                <a href="#d"> Nos solutions </a>
-                <a href="#d"> Nos offres d 'emploi</a>
-                <a href="#d"> Confiance </a>
-                <a href="#d"> Partenaires </a>
-                <Link
-                  to="/signup"
-                  style={{
-                    background: "silver",
-                    padding: "10px",
-                    color: "black",
-                    borderRadius: "5px",
-                  }}
-                >
-                  {" "}
+                      {
+                        dataUser && dataUser.data && dataUser.data && " Salut " + dataUser.data.pseudo
+                      }
+                    </Link>
+                    <Link
+                      to="/commander-une-course"
+                      style={{
+                        background: "silver",
+                        padding: "10px",
+                        color: "black",
+                        borderRadius: "5px",
+                      }}
+                    >
+                      {" "}
+                      {
+                        dataUser && dataUser.status === 200 ? <span onClick={handleLogout}>Déconnexion</span> : " S 'inscrire"
+                      }
 
-                  <span> {dataUser === null && "S 'inscrire"}</span>
+                    </Link>{" "}
+                  </> :
+                  <>
+                    <Link to="#domaine" className="item">  A propos <FaPlus /> </Link>
+                    <Link to="#d" className="item"> Nos services <FaPlus />  </Link>
+                    <Link to="#d" className="item"> Nos solutions <FaPlus />  </Link>
+                    <Link to="#d" className="item"> Nos offres d 'emploi <FaPlus /> </Link>
+                    <Link to="#d" className="item"> Confiance <FaPlus />  </Link>
+                    <Link to="#d" className="item"> Partenaires  <FaPlus /> </Link>
+                    <Link
+                      to="/signup"
+                      className="btnInscrisToi"
+                    >
+                      Inscris-toi
+                      <FaArrowCircleRight />
+                    </Link>
+                  </>
 
-                </Link>{" "}
-              </>
+              }
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
-          }
-        </li>{" "}
-      </ul>
-    </nav>
   );
 };
 

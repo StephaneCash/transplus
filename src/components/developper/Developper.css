@@ -1,53 +1,71 @@
 #developper h1 {
-    font-size: 2.2rem;
-    font-weight: 400;
+    font-size: 4rem;
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     text-align: center;
+    font-weight: bold;
+    font-family: "Poppins";
+}
+
+section#developper {
+    background-color: #fff;
 }
 
 .developper .grille {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 500px);
+    grid-template-columns: repeat(2, 37%);
+    gap: 2rem;
     justify-content: center;
-    gap: 10px;
+    margin-bottom: 5rem;
 }
 
 .developper .grille .card {
-    width: 500px;
     border: 1px solid silver;
     position: relative;
-}
-
-.developper .overPlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    height: 600px;
+    margin-bottom: 3rem;
+    border-radius: 15px !important;
+    margin-bottom: 0;
 }
 
 .developper .card-body {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+    color: #444;
     width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center;
+    text-align: center;
+    background-color: #ddd;
+    transition: all .3s;
+    padding: 1rem;
+    font-family: "Poppins";
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .developper .card .card-body h4 {
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Poppins";
     margin-bottom: 1rem;
 }
 
+.developper .card .card-body:hover {
+    background-color: crimson;
+    color: #fff;
+}
+
+.developper .card .card-body h4:hover {
+    color: #fff !important;
+}
 
 .developper .grille .card img {
     width: 100% !important;
-    height: 100% !important;
+    height: 50% !important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
 }
 
 .developper .grille .card .card-body {
@@ -56,22 +74,73 @@
 
 .developper a {
     text-decoration: none !important;
-    color: #111;
+    color: #fff;
 }
 
 .developper .card:hover {
     opacity: 0.8;
+    transform: scale(1.03);
 }
 
 .developper .grille .card .card-body button {
     border: 1px solid #fff;
     width: auto !important;
     padding: .7rem 1rem;
-    color: #111;
+    color: #ffff !important;
     text-decoration: none;
     border-radius: 5px;
-    background-color: #ddd;
+    background-color: crimson;
+    font-family: "Poppins";
+    font-weight: bold;
     font-size: 15px;
     margin-top: 1rem;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+@media screen and (max-width:1280px) {
+    .developper .grille {
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        gap: 2rem;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .developper .grille {
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        gap: 2rem;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .developper .grille {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        gap: 2rem;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    section#developper .container {
+        width: 100% !important;
+        padding: 0;
+    }
+
+    section#developper {
+        padding: 1rem;
+    }
+
+    #developper h1 {
+        font-size: 2rem;
+    }
+
+    #developper h4 {
+        font-size: 1.5rem !important;
+    }
 }

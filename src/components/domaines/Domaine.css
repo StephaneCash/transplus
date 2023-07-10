@@ -6,45 +6,84 @@ section#domaine {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
+    font-weight: bold;
 }
 
-.domaine .row {
+.domaine .data {
+    display: flex;
     align-items: center;
+    gap: 2rem;
+}
+
+.dataFlex {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.dataFlex .linkA {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 30%;
+}
+
+
+.dataFlex .linkA a {
+    color: #444;
+    text-decoration: none;
+}
+
+
+.dataFlex .linkA svg {
+    color: green;
 }
 
 .domaine .col-sm-6 img {
-    width: 70%;
-    border-radius: 20px;
-    float: right;
-    margin-right: 5rem;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-.domaine .col-sm-6 img:hover{
+.domaine .col-sm-6 img:hover {
     cursor: pointer;
 }
 
 .domaine .col-sm-6 h6 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     color: #020007;
     font-weight: 700;
 }
 
-.domaine .col-sm-6 .content{
+.domaine .col-sm-6 .content {
     text-align: justify;
+    font-size: 1.2rem;
 }
 
-.domaine .link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    color: #ce9900;
+
+
+@media screen and (max-width: 1200px) {
+    .domaine .col-sm-6 h6 {
+        font-size: 2rem;
+    }
 }
 
-.domaine .link a {
-    color: #020007;
-    text-decoration: none;
+@media screen and (max-width: 1050px) {
+    .domaine .col-sm-6:last-child {
+        padding: 1rem;
+    }
+
+    .domaine .data {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .domaine .col-sm-6 h6 {
+        font-size: 1.3rem;
+    }
 }
 
 @media screen and (max-width: 990px) {
@@ -56,4 +95,33 @@ section#domaine {
         width: auto !important;
         margin: 0.2rem 1rem;
     }
+}
+
+@media screen and (max-width: 630px) {
+    .domaine .data {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .domaine .data .col-sm-6 {
+        width: 100%;
+    }
+
+    .dataFlex .linkA{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .dataFlex {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .towRow {
+        margin: 0 !important;
+    }
+
 }

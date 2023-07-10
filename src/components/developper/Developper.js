@@ -1,9 +1,9 @@
 import React from 'react'
 import './Developper.css'
-import moto from "../../assets/moto.jpg"
-import moto1 from "../../assets/moto1.jpg"
+import moto from "../../assets/pexels-pragyan-bezbaruah-2629412.jpg"
+import moto1 from "../../assets/pexels-eneida-nieves-803937.jpg"
 import DELIVRE from "../../assets/delivre.svg"
-import FORMATION from "../../assets/formation.svg"
+import FORMATION from "../../assets/undraw_online_learning_re_qw08.svg"
 import { Link } from 'react-router-dom'
 
 const Developper = () => {
@@ -15,7 +15,6 @@ const Developper = () => {
                 <div className='grille'>
                     <div className='card'>
                         <img src={moto1} alt="Taxi" />
-                        <div className='overPlay'></div>
                         <div className='card-body'>
                             <h4>Commande de courses</h4>
                             Voulez-vous vous déplacez en toute sécurité ? <br />
@@ -31,19 +30,17 @@ const Developper = () => {
                     </div>
                     <div className='card'>
                         <img src={moto} alt="Taxi" />
-                        <div className='overPlay'></div>
                         <div className='card-body'>
                             <h4> Prêt des motos par contrat</h4>
                             Réaliser votre rêve en vous offrant une moto de qualité de votre choix en sollicitant un prêt chez nous.
                             Nous répondons aux souhaits de tout le monde sans exception. <br /> Profiter de nos services.
-                            <div className=''>
+                            <div>
                                 <button>Solliciter un prêt</button>
                             </div>
                         </div>
                     </div>
                     <div className='card'>
                         <img src={DELIVRE} alt="Taxi" />
-                        <div className='overPlay'></div>
                         <div className='card-body'>
                             <h4>Livrer vos produits avec nous</h4>
                             Livrez vos produits légalement au moment voulu à n'importe où et en toute sécurité.
@@ -55,7 +52,6 @@ const Developper = () => {
                     </div>
                     <div className='card'>
                         <img src={FORMATION} alt="Taxi" />
-                        <div className='overPlay'></div>
                         <div className='card-body'>
                             <h4>Formez-vous dans le domaine de transport avec des formations de très bonne qualité</h4>
                             Soyez ce que vous avez toujours rêvé en souscriant à l'une ou plusieurs de nos

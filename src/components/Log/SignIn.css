@@ -19,16 +19,15 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    ;
 }
 
 .log .form {
     display: flex;
     width: 70%;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    box-shadow: rgba(9, 10, 66, 0.25) 0px 4px 8px -2px, rgba(9, 10, 66, 0.08) 0px 0px 0px 1px;
     padding: 3rem;
-    border-radius: 3px;
-    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 15px;
 }
 
 .log .form label {
@@ -56,31 +55,31 @@
 .log input {
     box-shadow: none !important;
     padding: .7rem;
-    border-radius: 3px;
+    border-radius: 15px;
 }
 
 .log input:focus {
-    border: 1px solid #ce9900 !important;
+    border: 3px solid crimson !important;
 }
 
 .log button {
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 100%;
-    background-color: #ce9900;
-    border: 1px solid #ce9900;
+    background-color: crimson;
+    border: 1px solid crimson;
     padding: .7rem;
-    border-radius: 3px;
+    border-radius: 15px;
 }
 
 .log button:hover {
-    background-color: #ce9900;
+    background-color: crimson;
     opacity: 0.7;
-    border: 1px solid #ce9900;
+    border: 1px solid crimson;
 }
 
 .log button:active {
-    background-color: #ce9900 !important;
-    border: 1px solid #ce9900 !important;
+    background-color: crimson !important;
+    border: 1px solid crimson !important;
 }
 
 .log .signup {
@@ -91,7 +90,7 @@
 }
 
 .log .signup .deux {
-    color: #ce9900;
+    color: crimson;
     font-size: 14px;
 }
 
@@ -101,4 +100,14 @@
 
 .Toastify__toast-container--top-right {
     z-index: 1000000000 !important;
+}
+
+@media screen and (max-width:760px) {
+    .signup .col-sm-6:first-child {
+        display: none;
+    }
+
+    .signup .col-sm-6{
+        width: 100%;
+    }
 }

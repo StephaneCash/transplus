@@ -59,7 +59,7 @@ const SignUp = () => {
                 password: pwd
             })
                 .then(res => {
-                    toast.success(res && res.data && res.data.message);
+                    toast.success("Compte créé avec succès");
                     setTimeout(() => {
                         naviagate('/commander-une-course')
                     }, 3000);
@@ -85,7 +85,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className='log' style={{ height: "auto", marginTop: "100px", marginBottom: "1rem", height: "700px" }}>
+        <div className='log signup' style={{ height: "auto", marginBottom: "1rem", }}>
             <div className='form'>
                 <div className='col-sm-6'>
                     <img src={AUTH} alt="Auth" />
@@ -128,7 +128,7 @@ const SignUp = () => {
                                     type="password"
                                     className="form-control"
                                     id="exampleInputPassword1"
-                                    placeholder="Password"
+                                    placeholder="Password (taille minimale 6 caractères)"
                                     onChange={(e) => setPwd(e.target.value)}
                                 />
                                 {

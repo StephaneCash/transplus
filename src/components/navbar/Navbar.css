@@ -1,5 +1,4 @@
 nav {
-    position: fixed;
     z-index: 1000000;
     width: 100%;
     overflow: hidden;
@@ -10,13 +9,21 @@ nav a {
     text-decoration: none;
 }
 
-nav#navbar {
-    background-color: #020007;
+.header {
+    height: 45px;
+    background-color: crimson;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: .3rem 4rem;
+    padding: 1rem 5rem;
+}
 
+nav#navbar .navBar {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
 }
 
 nav ul {
@@ -25,13 +32,27 @@ nav ul {
 
 nav ul li {
     list-style-type: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 nav ul li a {
     margin-right: 1rem;
-    color: #fff;
-    font-size: 15px;
+    color: #000;
+    font-size: 12px;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+nav ul li .item svg {
+    color: crimson;
+    font-size: .7rem;
 }
 
 .logo {
@@ -46,11 +67,108 @@ nav ul li a {
 }
 
 nav .logo img {
-    width: 62px;
+    width: 80px;
 }
 
-@media screen and (max-width:610px) {
-    nav ul li {
+nav .show ul {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1rem;
+    background-color: #020007;
+    color: #fff;
+    display: block;
+}
+
+nav .show ul li .btnSignUp {
+    text-align: center;
+}
+
+nav .show ul li a {
+    z-index: 1;
+    color: #fff;
+}
+
+nav a:hover {
+    color: crimson !important;
+}
+
+.header .iconsAndText {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.btnInscrisToi {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid crimson;
+    background-color: crimson;
+    border-radius: 5px;
+    color: #fff;
+    padding: .6rem 1rem;
+    font-size: 11px;
+    transition: all .3s;
+}
+
+.btnInscrisToi:hover {
+    background-color: #fff;
+    color: crimson;
+}
+
+.btnInscrisToi svg {
+    font-size: 1.3rem;
+}
+
+.header .iconsAndText span {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.header .iconsAndText svg {
+    font-size: 1rem;
+    color: #fff;
+}
+
+@media screen and (max-width:1120px) {
+    nav#navbar .navBar {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:940px) {
+    nav#navbar .navBar {
+        padding: .5rem 1rem;
+    }
+}
+
+@media screen and (max-width:840px) {
+    nav#navbar .navBar ul li a {
+        font-size: 13px
+    }
+}
+
+@media screen and (max-width:805px) {
+    nav ul {
         display: none;
+    }
+
+    nav#navbar .navBar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navBar svg {
+        display: block;
+    }
+
+    nav#navbar .navBar {
+        padding: .5rem 1rem;
+    }
+
+    .header  {
+        padding: 1rem;
     }
 }

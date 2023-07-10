@@ -58,7 +58,7 @@ const SignIn = ({ setIsActive }) => {
 
     return (
         <div className='log'>
-            <div className='form'>
+            <div className='form signin'>
                 <div className='col-sm-6'>
                     <img src={AUTH} alt="Auth" />
                 </div>

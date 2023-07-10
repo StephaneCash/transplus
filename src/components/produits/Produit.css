@@ -1,5 +1,6 @@
 section#produit {
-    background-color: silver;
+    background-color: #111;
+    color: #ddd;
 }
 
 #produit h1 {
@@ -7,7 +8,6 @@ section#produit {
     font-weight: 400;
     text-align: center;
     text-align: center;
-    color: black;
 }
 
 #produit .head {
@@ -33,17 +33,24 @@ section#produit {
 .produit button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    color: #ddd;
 }
 
 .produit .footer1 {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    margin: 1px auto;
 }
 
 .produit .footer1 ul {
     padding: 0;
     margin: 0;
     width: 250px;
+    height: 250px;
 }
 
 .produit .footer1 ul li {
@@ -52,43 +59,71 @@ section#produit {
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-size: 14px;
 }
 
 .produit .footer1 ul li:first-child {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
 }
 
 .produit .footer1 ul li svg {
-    color: #333;
+    color: #ddd;
+    font-size: 1rem;
 }
 
 .produit .footer1 ul li.active a {
-    color: #020007;
+    color: #ddd;
     text-decoration: underline;
     display: flex;
     align-items: center;
     gap: .5rem;
-}
-
-.produit .chevron svg {
-    position: absolute;
-    bottom: 5px;
-    color: #ce9900 !important;
-    right: 2rem;
-    position: fixed;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 50px;
-    height: 50px;
-    border-radius: 150px;
+    text-decoration: none;
 }
 
 .produit .reseauxSociaux {
     display: flex;
 }
 
+.produit svg {
+    color: #ddd !important;
+}
+
 .produit .reseauxSociaux svg {
     font-size: 20px;
+}
+
+@media screen and (max-width: 670px) {
+    .produit .footer1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 250px);
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .produit .footer1 ul {
+        padding: 0;
+        margin: 0;
+        width: 250px;
+        height: auto;
+    }
+}
+
+#scroll-btn {       
+    opacity: 0;   
+    width: 40px;
+    height: 40px;
+    color: #ddd;
+    background-color: #333;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;    
+    border: 2px solid #ddd;
+    border-radius: 50%; 
+    font: bold 20px monospace;       
+    transition: opacity 0.5s, transform 0.5s;
+}
+#scroll-btn.show {      
+    opacity: 1;  
+    transition: opacity 1s, transform 1s;     
 }

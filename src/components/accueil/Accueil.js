@@ -1,29 +1,49 @@
 import React from 'react'
 import "./Accueil.css"
 import { Link } from 'react-router-dom'
+import app from "../../assets/appM.png"
+import { FaPlay } from 'react-icons/fa'
 
 const Accueil = () => {
     return (
         <section id="accueil">
-            <div className='overImage'></div>
-            <div className='container accueil'>
+            <div className='accueil'>
                 <div className='text'>
-                    <h1>Transplus, déplacez-vous autrement et en toute sécurité</h1>
+                    <h1>Transplus, déplacez-vous <span>autrement</span> et en toute <span> sécurité</span> </h1>
 
-                    <p>
-                        Facilitez vos déplacements sans inquiétude en commandant
-                        vos courses chez nous en toute sécurité
-                    </p>
+                    <div className='d-flex'>
+                        <div className='col-sm-1'>
+                            <FaPlay />
+                        </div>
+                        <div className='col-sm-10'>Franche collaboration</div>
+                    </div>
+                    <div className='d-flex'>
+                        <div className='col-sm-1'>
+                            <FaPlay />
+                        </div>
+                        <div className='col-sm-10'>Sécurité assurée</div>
+                    </div>
+                    <div className='d-flex'>
+                        <div className='col-sm-1'>
+                            <FaPlay />
+                        </div>
+                        <div className='col-sm-10'>24/7 Disponibilité</div>
+                    </div>
+                    <div className='d-flex'>
+                        <div className='col-sm-1'>
+                            <FaPlay />
+                        </div>
+                        <div className='col-sm-10'>Réservations illimitées</div>
+                    </div>
 
-                    <div className='btnDec'>
-                        <a href="#decouvrir" className='dec'>
-                            Découvrir
-                        </a>
+                    <div className='btnDec mt-4'>
                         <Link to="commander-une-course" className='com'>
-                            Commander une course
+                            Commander
                         </Link>
                     </div>
                 </div>
+
+                <img src={app} alt="" />
             </div>
         </section>
     )

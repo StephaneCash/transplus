@@ -1,16 +1,19 @@
 import React from 'react'
 import './Securite.css'
-import JOB from "../../assets/job.svg"
+import JOB from "../../assets/offres.jpg"
 import { FaArrowRight } from 'react-icons/fa'
 
 const Securiter = () => {
     return (
         <section id="securite">
-            <div className='container securite'>
-                <h1>Nos offres</h1>
-                <div className='row'>
-                    <div className='col-sm-6'>
-                        <h4 className='title'>Nous proposons des offres d'emploi...</h4>
+            <div className='securite'>
+                <div className='data'>
+                    <div className='image'>
+                        <img src={JOB} alt="Jobs" />
+                    </div>
+
+                    <div className='text'>
+                        <h4>Nos offres</h4>
                         <p>
                             Processus incontournable de la vie de l'entreprise, le recrutement correspond à l'ensemble des actions mises en œuvre pour trouver le candidat qui correspond aux exigences de compétences (savoirs, savoir-faire et savoir-être) et de qualifications (diplômes et titres) requises pour un poste donné.
                             <br />
@@ -19,9 +22,6 @@ const Securiter = () => {
                         <div>
                             <button>Découvrir <FaArrowRight /></button>
                         </div>
-                    </div>
-                    <div className='col-sm-6'>
-                        <img src={JOB} alt="Jobs" />
                     </div>
                 </div>
             </div>
