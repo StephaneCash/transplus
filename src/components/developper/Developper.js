@@ -1,9 +1,9 @@
 import React from 'react'
 import './Developper.css'
-import moto from "../../assets/pexels-pragyan-bezbaruah-2629412.jpg"
-import moto1 from "../../assets/pexels-eneida-nieves-803937.jpg"
+import moto from "../../assets/app.jpg"
+import moto1 from "../../assets/accueil.jpg"
 import DELIVRE from "../../assets/delivre.svg"
-import FORMATION from "../../assets/undraw_online_learning_re_qw08.svg"
+import FORMATION from "../../assets/dispo1.png"
 import { Link } from 'react-router-dom'
 
 const Developper = () => {

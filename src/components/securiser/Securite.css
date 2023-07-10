@@ -8,6 +8,8 @@ section#securite {
     display: flex;
     gap: 7rem;
     align-items: center;
+    height: 550px;
+
 }
 
 .securite .image {
@@ -17,9 +19,6 @@ section#securite {
 .securite img {
     width: 100%;
     object-fit: cover;
-    height: 700px;
-    margin-top: -100px;
-    border-radius: 13rem;
 }
 
 .securite .text {
@@ -27,7 +26,6 @@ section#securite {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: 450px;
 }
 
 .securite .text p {
@@ -90,9 +88,7 @@ section#securite {
         width: 100% !important;
     }
 
-    .securite .image img {
-        width: 250px;
-    }
+   
 }
 
 @media screen and (max-width: 1250px) {
@@ -110,11 +106,10 @@ section#securite {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-    }
-
-    .securite .text {
         height: auto;
     }
+
+  
 
     .securite .text h4 {
         font-size: 1.6rem;
