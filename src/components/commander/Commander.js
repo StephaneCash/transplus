@@ -5,15 +5,11 @@ import SignIn from '../Log/SignIn';
 import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
 import MapBox from './MapBox';
-import { ContextApp } from '../../AppContext';
 
 
 const Commander = () => {
 
     const [isAtive, setIsActive] = useState(false);
-
-    const { dataUser } = useContext(ContextApp);
-
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }, []);
@@ -31,7 +27,7 @@ const Commander = () => {
             <div className='commander'>
                 <div className='col-sm-12'>
                     {
-                        dataUser && dataUser.status === 200 ? <MapBox /> :
+                        isAtive ? <MapBox /> :
                             <SignIn
                                 setIsActive={setIsActive}
                             />

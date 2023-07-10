@@ -23,6 +23,7 @@ const SignIn = ({ setIsActive }) => {
         let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
         setBtnClic(true);
         event.preventDefault();
+        setIsActive(true);
         if (email && pwd) {
             if (email.match(pattern)) {
                 axios.post(`${baseUrl}/users/authentification`, {
@@ -32,7 +33,6 @@ const SignIn = ({ setIsActive }) => {
                     .then(res => {
                         if (res.status === 200) {
                             toast.success('Authentification réussie avec succès');
-                            setIsActive(true);
                             setBtnClic(true);
                             setUserConnected(res.data);
                             localStorage.setItem('user', JSON.stringify(res.data));
