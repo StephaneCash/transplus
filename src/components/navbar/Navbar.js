@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <>
 
       <div className="header">
         <div className="iconsAndText">
@@ -87,8 +87,7 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-    </div>
-
+    </>
   );
 };
 

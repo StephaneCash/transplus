@@ -36,6 +36,7 @@ const SignIn = ({ setIsActive }) => {
                             setBtnClic(true);
                             setUserConnected(res.data);
                             localStorage.setItem('user', JSON.stringify(res.data));
+                            window.location = "/";
                         }
                     })
                     .catch(err => {

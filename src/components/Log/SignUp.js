@@ -60,9 +60,7 @@ const SignUp = () => {
             })
                 .then(res => {
                     toast.success("Compte créé avec succès");
-                    setTimeout(() => {
-                        naviagate('/commander-une-course')
-                    }, 3000);
+                    naviagate('/signin');
                     setLoading(false);
                 })
                 .catch(err => {
@@ -85,8 +83,8 @@ const SignUp = () => {
     }
 
     return (
-        <div className='log signup' style={{ height: "auto", marginBottom: "1rem", }}>
-            <div className='form'>
+        <div className='log'>
+            <div className='form signin'>
                 <div className='col-sm-6'>
                     <img src={AUTH} alt="Auth" />
                 </div>

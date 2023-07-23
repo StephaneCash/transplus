@@ -1,1 +1,1 @@
-export const baseUrl = "https://api.muniegroup.com/api"
+export const baseUrl = "http://127.0.0.1:5003/api"
