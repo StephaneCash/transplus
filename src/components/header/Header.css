@@ -1,0 +1,17 @@
+.header {
+    width: 100%;
+    padding: .6rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eeee;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header .iconsAndText {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

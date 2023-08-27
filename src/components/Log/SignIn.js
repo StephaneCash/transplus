@@ -10,7 +10,7 @@ import { useContext } from 'react'
 import { ContextApp } from '../../AppContext'
 import Loader from '../loader/Loader'
 
-const SignIn = ({ setIsActive }) => {
+const SignIn = () => {
 
     const { setUserConnected } = useContext(ContextApp);
 
@@ -23,7 +23,6 @@ const SignIn = ({ setIsActive }) => {
         let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
         setBtnClic(true);
         event.preventDefault();
-        setIsActive(true);
         if (email && pwd) {
             if (email.match(pattern)) {
                 axios.post(`${baseUrl}/users/authentification`, {
@@ -35,7 +34,7 @@ const SignIn = ({ setIsActive }) => {
                             toast.success('Authentification réussie avec succès');
                             setBtnClic(true);
                             setUserConnected(res.data);
-                            localStorage.setItem('user', JSON.stringify(res.data));
+                            localStorage.setItem('userConnected', JSON.stringify(res.data));
                             window.location = "/";
                         }
                     })
@@ -47,12 +46,10 @@ const SignIn = ({ setIsActive }) => {
 
             } else {
                 toast.error("Votre adresse email n'est pas valide.");
-                setIsActive(false);
                 setBtnClic(false);
             }
         } else {
             toast.error("Veuillez remplir tous les champs svp.");
-            setIsActive(false);
             setBtnClic(false);
         }
     };

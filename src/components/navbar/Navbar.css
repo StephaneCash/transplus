@@ -1,177 +1,167 @@
-nav {
-    z-index: 1000000;
-    width: 100%;
-    overflow: hidden;
-    top: 0;
-}
-
-nav a {
-    text-decoration: none;
-}
-
-.header {
-    height: 45px;
-    background-color: crimson;
+.navBar {
     display: flex;
-    align-items: center;
-    padding: 1rem 5rem;
-    top: 0;
-    position: sticky;
-    z-index: 1;
-}
-
-nav#navbar .navBar {
-    background-color: #fff;
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5rem;
+    padding: 1rem 5rem;
+    background-color: #fff;
 }
 
-nav ul {
-    margin-bottom: 0 !important;
+.navBar .logo {
+    width: 50px;
 }
 
-nav ul li {
-    list-style-type: none;
+.navBar .logo img {
     width: 100%;
+}
+
+.navBar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
-nav ul li a {
-    margin-right: 1rem;
-    color: #000;
-    font-size: 12px;
+.navBar ul li {
+    display: flex;
+}
+
+.navBar ul li a {
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: .5rem;
+    color: #333;
 }
 
-nav ul li .item svg {
-    color: crimson;
-    font-size: .7rem;
-}
-
-.logo {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.logo span {
-    color: #fff;
-    font-size: 17px
-}
-
-nav .logo img {
-    width: 80px;
-}
-
-nav .show ul {
-    width: 100%;
-    height: auto;
-    padding-bottom: 1rem;
-    background-color: #020007;
-    color: #fff;
-    display: block;
-}
-
-nav .show ul li .btnSignUp {
-    text-align: center;
-}
-
-nav .show ul li a {
-    z-index: 1;
-    color: #fff;
-}
-
-nav a:hover {
-    color: crimson !important;
-}
-
-.header .iconsAndText {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    gap: 1rem;
-}
-
-.btnInscrisToi {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid crimson;
-    background-color: crimson;
-    border-radius: 5px;
+.navBar .btnInscrisToi {
+    border: 1px solid #ddd;
+    background-color: #fb2638;
     color: #fff;
     padding: .6rem 1rem;
-    font-size: 11px;
-    transition: all .3s;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
 }
 
-.btnInscrisToi:hover {
+.navBar .btnInscrisToi:hover {
     background-color: #fff;
-    color: crimson;
+    color: #fb2638;
 }
 
-.btnInscrisToi svg {
-    font-size: 1.3rem;
-}
-
-.header .iconsAndText span {
-    color: #fff;
+.navBar .btnInscrisToi div {
     font-size: 1.1rem;
 }
 
-.header .iconsAndText svg {
-    font-size: 1rem;
-    color: #fff;
+
+.navBar #icons {
+    cursor: pointer;
+    display: none;
 }
 
-@media screen and (max-width:1120px) {
-    nav#navbar .navBar {
+.navBar .btnIbnscr {
+    display: none;
+}
+
+@media screen and (max-width:970px) {
+    .navBar {
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .navBar #icons {
+        display: block;
+        position: absolute;
+        top: 2%;
+        right: 3%;
+    }
+
+    .navBar .btnIbnscr {
+        display: block;
+        width: 40%;
+    }
+
+    .navBar .btnIbnscr a {
+        display: block;
+        border: 1px solid #ddd;
+        background-color: #fb2638;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 30px;
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-decoration: none;
     }
-}
 
-@media screen and (max-width:940px) {
-    nav#navbar .navBar {
-        padding: .5rem 1rem;
-    }
-}
-
-@media screen and (max-width:840px) {
-    nav#navbar .navBar ul li a {
-        font-size: 13px
-    }
-}
-
-@media screen and (max-width:805px) {
-    nav ul {
+    .navBar .btnInscrisToi {
         display: none;
     }
 
-    nav#navbar .navBar {
-        display: flex;
-        flex-direction: row;
+    .navBar {
+        justify-content: space-between;
     }
 
-    .navBar svg {
-        display: block;
+    .navBar.active #icons::before {
+        content: '\2715';
+        font-size: 2rem;
     }
 
-    nav#navbar .navBar {
-        padding: .5rem 1rem;
+    .navBar #icons::before {
+        content: "\2630";
+        font-size: 2rem;
     }
 
-    .header  {
+    .navBar ul {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: .25s;
         padding: 1rem;
+        z-index: 1000000000;
+        justify-content: center;
+        overflow-y: scroll;
+    }
+
+    .navBar.active ul li {
+        padding: 3px 0;
+        color: #fff;
+        font-size: 1.5rem !important;
+    }
+
+    .navBar ul li span {
+        padding: 3px 0;
+        color: #333;
+        font-size: 1.5rem !important;
+    }
+
+
+    .navBar ul li:hover {
+        color: #fb2638 !important;
+    }
+
+    .navBar.active ul {
+        left: 0;
+    }
+
+    .header {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .navBar .btnIbnscr {
+        display: block;
+        width: 90%;
     }
 }

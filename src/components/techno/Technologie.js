@@ -8,13 +8,13 @@ const Technologie = () => {
       <div className="container techno">
         <div className="grille">
           <div className="card">
-            <img src="./pullup.jpeg" alt="pullUp" />
+            <img src="./pullup.jpg" alt="pullUp" />
           </div>
           <div className="card">
-            <img src="./code.jpg" alt="EmpireCode" />
+            <img src="./geek.jpg" alt="EmpireCode" />
           </div>
           <div className="card">
-            <img src="./fec.jpg" alt="Fec" />
+            <img src="./cnrem.jpg" alt="Fec" />
           </div>
         </div>
       </div>

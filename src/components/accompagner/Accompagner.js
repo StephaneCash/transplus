@@ -1,8 +1,8 @@
 import React from 'react'
 import "./Accompagner.css"
-import collaboration from "../../assets/colla2.jpg"
-import security from "../../assets/secP.jpg"
-import dispo from "../../assets/dispo1.png"
+import collaboration from "../../assets/form.jpg"
+import security from "../../assets/dispoP.jpg"
+import dispo from "../../assets/im1.jpg"
 import { Link } from 'react-router-dom'
 
 const Accompagner = () => {

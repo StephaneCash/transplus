@@ -1,62 +1,62 @@
-section#sec1Col {
-    background: url("../../assets/collab.jpg");
-    background-color: #cccccc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 50px;
-}
-
-#sec1Col .overPlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.icons-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 16%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+.pathLink {
+    padding: 1rem 1rem 1rem 5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 2rem;
-    font-size: 30px;
+    background-color: #ddd !important;
 }
 
-section#collaboration {
-    background-color: #ddd;
-}
-
-.collaboration .text p, #collaboration1 .text p {
-    text-align: justify;
-}
-
-.collaboration1 .image img {
-    width: 100%;
-    object-fit: cover;
-    height: 400px;
-}
-
-.dFlex {
-    gap: 2rem;
-    align-items: center;
-}
-
-.collaboration h4, .collaboration1 h4 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+.pathLink a {
     color: #333;
-    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.collaboration {
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background-color: #fff;
+    height: 500px;
 }
 
 .collaboration img {
-    width: 90%;
+    object-fit: cover;
+    width: 50%;
+    height: 400px;
+}
+
+.collaboration h4 {
+    font-size: 1.6rem !important;
+}
+
+.collaboration p {
+    text-align: justify;
+}
+
+@media screen and (max-width:1200px) {
+    .collaboration img {
+        width: 40% !important;
+    }
+}
+
+@media screen and (max-width:910px) {
+    .collaboration img {
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .collaboration {
+        padding: 1rem;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .collaboration img {
+        width: 100% !important;
+    }
 }

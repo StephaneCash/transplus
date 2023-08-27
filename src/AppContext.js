@@ -3,6 +3,8 @@ import App from './App';
 import axios from 'axios';
 import { baseUrl } from './bases/bases';
 
+import { decodeToken } from 'react-jwt';
+
 export const ContextApp = createContext();
 
 const AppContext = () => {
@@ -12,23 +14,21 @@ const AppContext = () => {
 
     const [val, setVal] = useState(null);
 
-    const user = localStorage.getItem('user');
+    const user = localStorage.getItem('userConnected');
     const dataParse = JSON.parse(user)
-    const id = dataParse && dataParse.id;
+    const userParse = decodeToken(dataParse && dataParse.jeton);
 
     useEffect(() => {
-        if (id) {
-            axios.get(`${baseUrl}/users/${id}`)
+        if (userParse) {
+            axios.get(`${baseUrl}/users/${userParse && userParse.id}`)
                 .then(res => {
-                    setDataUser(res)
+                    setDataUser(res && res.data);
                 })
                 .catch(err => {
                     console.log(err)
                 });
         }
-    }, [id]);
-
-    console.log(id)
+    }, []);
 
     return (
         <ContextApp.Provider

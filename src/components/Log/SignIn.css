@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center !important;
     align-items: center;
+    padding: 1rem 0;
     height: 100vh;
 }
 
@@ -107,7 +108,26 @@
         display: none;
     }
 
-    .signup .col-sm-6{
+    .signup .col-sm-6 {
         width: 100%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .log .form {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .signin .col-sm-6:first-child {
+        display: none;
+    }
+
+    .signin input {
+        width: 100%;
+    }
+
+    .signin .col-sm-6 {
+        width: 100% !important;
     }
 }

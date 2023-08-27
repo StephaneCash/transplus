@@ -64,6 +64,7 @@ const SignUp = () => {
                     setLoading(false);
                 })
                 .catch(err => {
+                    console.log(err)
                     console.log(err.response);
                     setLoading(false);
                     toast.error(err && err.response.data && err.response.data.message);
@@ -91,7 +92,7 @@ const SignUp = () => {
                 <div className='col-sm-6'>
                     <form onSubmit={handleSubmit}>
                         <div className='iconsText'>
-                            <span>Inscription</span>
+                            <span>INSCRIPTION</span>
                             <div className='icons'>
                                 <FaFacebook color='#00B0FF' />
                                 <FaGoogle color='#ce9900' />
@@ -155,7 +156,7 @@ const SignUp = () => {
                             <span className='one'>Avez-vous un compte ?</span>
                             <br />
                             <span className='deux'>
-                                <Link to="/commander-une-course">Connectez-vous</Link>
+                                <Link to="/signin">Connectez-vous</Link>
                             </span>
                         </div>
                     </form>
