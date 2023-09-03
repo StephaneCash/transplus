@@ -1,6 +1,6 @@
 .developper {
     padding: 5rem;
-    background-color: #eee;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,28 +18,32 @@
     grid-template-columns: repeat(4, 19%);
     gap: 2rem;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 .developper .grille .card {
     position: relative;
+    text-align: center;
     height: 250px;
     border: 0;
-    border-radius: 10px;
-    background-color: transparent;
-    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: 1px solid #ddd;
 }
 
 .developper .grille .card img {
     width: 100% !important;
     height: 80% !important;
-    object-fit: scale-down;
+    object-fit: cover;
     margin-bottom: 1rem;
     border-radius: 10px;
 }
 
 .developper .grille .card span {
     padding: 0 0 1rem 1rem;
+    font-size: 12px !important;
 }
 
 .developper a {
@@ -52,23 +56,35 @@
     transform: scale(1.03);
 }
 
+@media screen and (max-width:1200px) {
+    .developper .grille {
+        gap: 1rem;
+    }
+
+    .developper .grille {
+        grid-template-columns: repeat(4, 24%);
+    }
+}
+
+@media screen and (max-width:900px) {
+    .developper .grille {
+        grid-template-columns: repeat(2, 48%);
+        gap: 2rem;
+    }
+}
+
 @media screen and (max-width:800px) {
     .developper {
         padding: 5rem 0;
     }
 
-    .developper .grille {
-        grid-template-columns: repeat(4, 19%);
+    .developper .grille .card img {
+        object-fit: scale-down;
     }
 }
 
-
 @media screen and (max-width:600px) {
-    .developper .grille {
-        grid-template-columns: repeat(2, 49%);
-        gap: 0;
-    }
-
+    
     section#developper .container {
         width: 100% !important;
         padding: 0;
@@ -84,5 +100,11 @@
 
     #developper h4 {
         font-size: 1.5rem !important;
+    }
+
+    .developper .grille {
+        grid-template-columns: repeat(2, 48.5%);
+        gap: 1rem;
+        padding: .7rem !important;
     }
 }

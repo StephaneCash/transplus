@@ -1,7 +1,7 @@
 import React from 'react'
 import './Developper.css'
 import iconCommade from "../../assets/iconCommade.png";
-import iconLivraison from "../../assets/iconLivraison.png"
+import iconLivraison from "../../assets/iconDelivary.png"
 import pretMoto from "../../assets/pretMoto.png"
 import iconFormation from "../../assets/iconFormation.png"
 

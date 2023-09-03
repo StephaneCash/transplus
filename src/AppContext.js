@@ -16,7 +16,7 @@ const AppContext = () => {
 
     const user = localStorage.getItem('userConnected');
     const dataParse = JSON.parse(user)
-    const userParse = decodeToken(dataParse && dataParse.jeton);
+    const userParse = 2;
 
     useEffect(() => {
         if (userParse) {

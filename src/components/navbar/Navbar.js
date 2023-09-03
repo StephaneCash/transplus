@@ -38,6 +38,7 @@ const Navbar = () => {
       <nav className="navBar">
         <Link to="/" className="logo">
           <img src={logo} alt="Logo" />
+          <span>Transplus</span>
         </Link>
 
         <ul>

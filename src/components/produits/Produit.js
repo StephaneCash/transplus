@@ -31,8 +31,8 @@ const Produit = () => {
     return (
         <section id="produit">
             <div className='container produit'>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1"
+                <div className="form-group">
+                    <input type="email" className="form-control" id="exampleInputEmail1"
                         aria-describedby="emailHelp" placeholder="Entrer une adresse email svp"
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}

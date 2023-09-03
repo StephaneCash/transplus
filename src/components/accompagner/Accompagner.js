@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 const Accompagner = () => {
     return (
         <section id="accompagner">
-            <div className='container accompagner'>
+            <div className='accompagner'>
                 <h1>Fiers d'offrir l'excellence à chaque fois</h1>
                 <div className='grille'>
                     <div className="card">

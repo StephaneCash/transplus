@@ -8,6 +8,16 @@
 
 .navBar .logo {
     width: 50px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none !important;
+    color: crimson;
+}
+
+.navBar .logo span {
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 .navBar .logo img {
@@ -67,6 +77,18 @@
     display: none;
 }
 
+@media screen and (max-width:1155px) {
+    .navBar {
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (max-width:1045px) {
+    .navBar .logo span {
+        display: none;
+    }
+}
+
 @media screen and (max-width:970px) {
     .navBar {
         padding: 1rem 2rem;
@@ -76,9 +98,14 @@
 @media screen and (max-width:900px) {
     .navBar #icons {
         display: block;
-        position: absolute;
-        top: 2%;
-        right: 3%;
+    }
+
+    .navBar .logo span {
+        display: block;
+    }
+
+    .navBar .logo {
+        width: 35px;
     }
 
     .navBar .btnIbnscr {
@@ -111,6 +138,9 @@
     .navBar.active #icons::before {
         content: '\2715';
         font-size: 2rem;
+        position: absolute;
+        right: 5%;
+        top: 1%;
     }
 
     .navBar #icons::before {
@@ -163,5 +193,9 @@
     .navBar .btnIbnscr {
         display: block;
         width: 90%;
+    }
+
+    .navBar {
+        align-items: center;
     }
 }
