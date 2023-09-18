@@ -1,0 +1,134 @@
+.driving {
+    width: 100%;
+}
+
+.driving nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.driving .content .alert {
+    width: 100%;
+}
+
+.driving nav .logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.driving nav .logo img {
+    width: 60px;
+}
+
+.driving nav .logo span {
+    font-weight: 600;
+    color: #fb2638;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.driving .contentSearch {
+    background-color: #ddd;
+    padding: 1rem;
+    border-radius: 30px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.driving .div1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.driving .div1 h5 {
+    padding: 0;
+    margin: 0;
+}
+
+.driving .div1 svg {
+    color: #fb2638;
+}
+
+.driving .contentSearch input {
+    background-color: #ddd;
+    border: 0;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+}
+
+.driving .content {
+    padding: 2rem 5rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.driving .grille {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 19%);
+    justify-content: space-between;
+}
+
+.driving .grille .card {
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media screen and (max-width:1300px) {
+    .driving .grille {
+        grid-template-columns: repeat(4, 24%);
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .driving .grille {
+        grid-template-columns: repeat(3, 32%);
+    }
+}
+
+@media screen and (max-width:800px) {
+    .driving .content {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .driving .contentSearch {
+        width: 50%;
+    }
+
+    .driving .grille {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .driving .content {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .driving nav .logo span {
+        display: none;
+    }
+
+    .driving .contentSearch {
+        width: 70%;
+    }
+}

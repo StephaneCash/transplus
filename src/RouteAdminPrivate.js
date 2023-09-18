@@ -3,15 +3,15 @@ import React from 'react'
 import { decodeToken } from 'react-jwt';
 import { Outlet, Navigate } from 'react-router-dom';
 
-const RoutesPrivate= () => {
+const RouteAdminPrivate= () => {
     
-    const jwt = JSON.parse(localStorage.getItem('userConnected'));
+    const jwt = JSON.parse(localStorage.getItem('userDriving'));
     const decodedToken = decodeToken(jwt && jwt);
 
     return (
         Number.isSafeInteger(decodedToken && decodedToken.id)
-            ? <Outlet /> : <Navigate to="/signin" />
+            ? <Outlet /> : <Navigate to="/admin/login" />
     )
 }
 
-export default RoutesPrivate;
+export default RouteAdminPrivate;

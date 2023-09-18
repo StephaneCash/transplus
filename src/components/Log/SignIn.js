@@ -25,7 +25,7 @@ const SignIn = () => {
         event.preventDefault();
         if (email && pwd) {
             if (email.match(pattern)) {
-                axios.post(`${baseUrl}/users/authentification`, {
+                axios.post(`${baseUrl}/users/signIn`, {
                     email: email,
                     password: pwd
                 })
@@ -34,7 +34,7 @@ const SignIn = () => {
                             toast.success('Authentification réussie avec succès');
                             setBtnClic(true);
                             setUserConnected(res.data);
-                            localStorage.setItem('userConnected', JSON.stringify(res.data));
+                            localStorage.setItem('userConnected', JSON.stringify(res.data && res.data.data));
                             window.location = "/";
                         }
                     })
@@ -105,6 +105,10 @@ const SignIn = () => {
                             <span className='deux'>
                                 <Link to="/signup">Créer un compte</Link>
                             </span>
+                        </div>
+
+                        <div className='linkHome'>
+                            <Link to="/">Retour sur la page d'accueil</Link>
                         </div>
                     </form>
                 </div>

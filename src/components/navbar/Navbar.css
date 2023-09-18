@@ -45,7 +45,8 @@
     color: #333;
 }
 
-.navBar .btnInscrisToi {
+.navBar .btnInscrisToi,
+.navBar .btnDeconnexion {
     border: 1px solid #ddd;
     background-color: #fb2638;
     color: #fff;
@@ -77,6 +78,10 @@
     display: none;
 }
 
+.navBar .sizeHot {
+    display: none !important;
+}
+
 @media screen and (max-width:1155px) {
     .navBar {
         padding: 1rem 2rem;
@@ -95,9 +100,13 @@
     }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:965px) {
     .navBar #icons {
         display: block;
+    }
+
+    .navBar .sizeHot {
+        display: flex !important;
     }
 
     .navBar .logo span {
@@ -140,7 +149,8 @@
         font-size: 2rem;
         position: absolute;
         right: 5%;
-        top: 1%;
+        top: 3%;
+        color: #fff;
     }
 
     .navBar #icons::before {
@@ -153,26 +163,32 @@
         left: -100%;
         top: 0;
         flex-direction: column;
-        background-color: #fff;
+        background-color: #333;
         width: 100%;
         text-align: center;
         transition: .25s;
-        padding: 1rem;
         z-index: 1000000000;
         justify-content: center;
         overflow-y: scroll;
+        height: 100vh;
+        gap: 0;
     }
 
     .navBar.active ul li {
         padding: 3px 0;
         color: #fff;
-        font-size: 1.5rem !important;
+        border-bottom: 1px solid #777;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
     }
 
     .navBar ul li span {
         padding: 3px 0;
-        color: #333;
-        font-size: 1.5rem !important;
+        color: #fff;
+        font-size: 1.2rem !important;
     }
 
 
@@ -193,6 +209,10 @@
     .navBar .btnIbnscr {
         display: block;
         width: 90%;
+    }
+
+    .navBar .nomNoneDisplay {
+        display: none;
     }
 
     .navBar {

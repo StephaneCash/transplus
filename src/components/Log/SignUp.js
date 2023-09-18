@@ -19,6 +19,7 @@ const SignUp = () => {
 
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
+    const [numTel, setNumTel] = useState("");
     const [pwd, setPwd] = useState('');
     const [laoding, setLoading] = useState(false);
     const [eye, setEye] = useState(true);
@@ -49,14 +50,15 @@ const SignUp = () => {
         setLoading(true);
         e.preventDefault();
 
-        if (pwd.length < 6) {
-            toast.error('Le mot de passe doit avoir au minimum 6 acarctères');
+        if (pwd.length < 4) {
+            toast.error('Le mot de passe doit avoir au minimum 4 caractères');
             setLoading(false);
         } else {
             axios.post(`${baseUrl}/users`, {
                 pseudo: username,
                 email: email,
-                password: pwd
+                password: pwd,
+                numTel
             })
                 .then(res => {
                     toast.success("Compte créé avec succès");
@@ -106,6 +108,17 @@ const SignUp = () => {
                                 id="username"
                                 placeholder="Entrer votre prénom"
                                 onChange={(e) => setUsername(e.target.value)}
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="username">Votre numéro de téléphone</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="username"
+                                placeholder="Entrer votre numéro de téléphone"
+                                onChange={(e) => setNumTel(e.target.value)}
                             />
                         </div>
                         <div className="form-group">
@@ -158,6 +171,10 @@ const SignUp = () => {
                             <span className='deux'>
                                 <Link to="/signin">Connectez-vous</Link>
                             </span>
+                        </div>
+
+                        <div className='linkHome'>
+                            <Link to="/">Retour sur la page d'accueil</Link>
                         </div>
                     </form>
                 </div>

@@ -14,6 +14,10 @@ import SignUp from './components/Log/SignUp';
 import PageUser from './components/commander/PageUser';
 import RoutesPrivate from './RoutesPrivate';
 import SignIn from "./components/Log/SignIn";
+import Login from './admin/Login';
+import Register from './admin/Register';
+import RouteAdminPrivate from "./RouteAdminPrivate"
+import Driving from "./admin/Driving"
 
 function App() {
   return (
@@ -30,6 +34,13 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/answer' element={<PageUser />} />
+
+        <Route path='/admin/login' element={<Login />} />
+        <Route path='/admin/register' element={<Register />} />
+
+        <Route element={<RouteAdminPrivate />}>
+          <Route path='/admin' element={<Driving />} />
+        </Route>
       </Routes>
       <ToastContainer />
     </BrowserRouter>

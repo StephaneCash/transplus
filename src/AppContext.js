@@ -16,19 +16,20 @@ const AppContext = () => {
 
     const user = localStorage.getItem('userConnected');
     const dataParse = JSON.parse(user)
-    const userParse = 2;
+    const userParse = decodeToken(dataParse);
+    const id = userParse && userParse.id;
 
     useEffect(() => {
         if (userParse) {
-            axios.get(`${baseUrl}/users/${userParse && userParse.id}`)
+            axios.get(`${baseUrl}/users/${id && id}`)
                 .then(res => {
-                    setDataUser(res && res.data);
+                    setDataUser(res && res.data && res.data.data);
                 })
                 .catch(err => {
                     console.log(err)
                 });
         }
-    }, []);
+    }, [id]);
 
     return (
         <ContextApp.Provider

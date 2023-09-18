@@ -99,6 +99,12 @@
     font-size: 14px;
 }
 
+.linkHome {
+    text-align: center;
+    width: 100% !important;
+    margin-top: 10px;
+}
+
 .Toastify__toast-container--top-right {
     z-index: 1000000000 !important;
 }
@@ -129,5 +135,10 @@
 
     .signin .col-sm-6 {
         width: 100% !important;
+    }
+
+    .log span,
+    .log a {
+        text-align: center;
     }
 }

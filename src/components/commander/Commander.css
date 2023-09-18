@@ -49,23 +49,25 @@ section#commander {
     margin: 1px auto;
 }
 
-.button {
-    border: 1px solid #ce9900;
-    width: auto !important;
-    padding: .6rem 2rem;
+.contentBtn .button {
+    border: 1px solid #fb2638;
+    width: 60px;
+    height: 60px;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    background-color: #ce9900;
+    border-radius: 120px;
+    background-color: #fb2638;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
         rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pageA {
-    height: 90vh;
-    margin-top: 70px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,17 +76,32 @@ section#commander {
 }
 
 .pageA button {
-    border: 1px solid #ce9900;
+    border: 1px solid #fb2638;
     width: auto !important;
     padding: .6rem 2rem;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    background-color: #ce9900;
+    border-radius: 30px;
+    background-color: #fb2638;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
         rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.pageA svg {
+    font-size: 60px !important;
+}
+
+.contentMap {
+    position: relative;
+}
+
+.contentMap .button {
+    position: absolute;
+    z-index: 1000;
+    bottom: 20%;
+    right: 1%;
 }
 
 @media screen and (max-width:1050px) {
@@ -114,19 +131,23 @@ section#commander {
         margin-bottom: 1rem;
     }
 
-    .log .signup{
+    .log .signup {
         display: flex;
         flex-direction: column;
         gap: 0 !important;
         justify-content: baseline;
     }
 
-    .log .signup br{
+    .log .signup br {
         display: none;
     }
 
-    .commander .text span{
+    .commander .text span {
         font-size: 1.2rem;
+    }
+
+    .directions-control.directions-control-directions {
+        display: none !important;
     }
 }
 

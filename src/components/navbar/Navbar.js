@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { ContextApp } from "../../AppContext";
-import { FaArrowCircleRight } from "react-icons/fa";
 import logo from "../../assets/logo.png"
 import Header from "../header/Header";
 import { FiArrowRightCircle } from "react-icons/fi";
@@ -10,10 +9,9 @@ import { FiArrowRightCircle } from "react-icons/fi";
 const Navbar = () => {
 
   const { dataUser, setDataUser } = useContext(ContextApp);
-  const [showItem, setShowItem] = useState(false);
 
   const handleLogout = () => {
-    localStorage.removeItem('user');
+    localStorage.removeItem('userConnected');
     setDataUser(null);
   };
 
@@ -50,24 +48,38 @@ const Navbar = () => {
           <li><Link to="#d" className="item"> <span>Confiance</span>   </Link></li>
           <li><Link to="#d" className="item"> <span>Partenaires</span>   </Link></li>
 
-          <li className="btnIbnscr">
-            <Link
-              to="/signup"
-              className="btnInscrisToi"
-            >
-              <div>Inscris-toi</div>
-              <FiArrowRightCircle size={20} />
-            </Link>
-          </li>
+          {
+            dataUser ? <div className="sizeHot" style={{ display: "flex", alignItems: "center", gap: ".5rem", flexDirection: "column" }}>
+              <span style={{ fontWeight: "bold", color:"#fff", border:"1px solid silver", padding:".4rem 1rem", marginTop:"1rem", borderRadius:"4px" }}>{`Salut ${dataUser && dataUser.pseudo}`}</span>
+              <br />
+              <button className="btnDeconnexion" onClick={() => handleLogout()}>Déconnexion</button>
+            </div> : <li className="btnIbnscr">
+              <Link
+                to="/signin"
+                className="btnInscrisToi"
+              >
+                <div>Connectez-vous</div>
+                <FiArrowRightCircle size={20} />
+              </Link>
+            </li>
+          }
+
         </ul>
 
-        <Link
-          to="/signup"
-          className="btnInscrisToi"
-        >
-          <div>Inscris-toi</div>
-          <FiArrowRightCircle size={20} />
-        </Link>
+        {
+          dataUser ? <div style={{ display: "flex", alignItems: "center", gap: ".5rem" }}>
+            <span style={{ fontWeight: "bold" }} className="nomNoneDisplay">{`Salut ${dataUser && dataUser.pseudo}`}</span>
+            <br />
+            <button className="btnInscrisToi" onClick={() => handleLogout()}>Déconnexion</button>
+          </div> :
+            <Link
+              to="/signin"
+              className="btnInscrisToi"
+            >
+              <div>Connectez-vous</div>
+              <FiArrowRightCircle size={20} />
+            </Link>
+        }
 
         <div id='icons' onClick={() => displayMenu()}></div>
       </nav>

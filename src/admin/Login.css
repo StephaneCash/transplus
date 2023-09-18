@@ -1,0 +1,49 @@
+.loginAuth {
+    width: 100%;
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginAuth form {
+    width: 40%;
+}
+
+.loginAuth input {
+    box-shadow: none !important;
+    margin-bottom: 1rem;
+}
+
+.loginAuth button {
+    background-color: #fb2638;
+    border: 1px solid #fb2638;
+    margin-bottom: 1rem;
+}
+
+.loginAuth button:hover{
+    background-color: #fff;
+    border: 1px solid #fb2638;
+    color: #fb2638;
+}
+
+@media screen and (max-width:900px) {
+    .loginAuth form {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .loginAuth {
+        padding: 1rem;
+    }
+
+    .loginAuth form {
+        width: 100%;
+    }
+
+    .loginAuth button {
+        width: 100%;
+    }
+}
